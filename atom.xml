@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Leaface</title>
+  
+  <subtitle>Stay Hungry Stay Foolish</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://www.liaofuzhan.com/"/>
+  <updated>2019-12-13T10:30:54.266Z</updated>
+  <id>https://www.liaofuzhan.com/</id>
+  
+  <author>
+    <name>北宸</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>区块链项目环境搭建</title>
+    <link href="https://www.liaofuzhan.com/posts/2435254904.html"/>
+    <id>https://www.liaofuzhan.com/posts/2435254904.html</id>
+    <published>2019-12-13T09:36:06.000Z</published>
+    <updated>2019-12-13T10:30:54.266Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!-- build time:Sat Dec 14 2019 15:36:01 GMT+0800 (GMT+08:00) --&gt;&lt;div class=&quot;group-picture&quot;&gt;&lt;div class=&quot;group-picture-container&quot;&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;div class=&quot;group-picture-column&quot; style=&quot;width:100%&quot;&gt;&lt;img class=&quot;index_img_class&quot; src=&quot;https://s2.ax1x.com/2019/12/13/Qgdjh9.md.jpg&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="区块链" scheme="https://www.liaofuzhan.com/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+    
+      <category term="区块链" scheme="https://www.liaofuzhan.com/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+      <category term="Fabric" scheme="https://www.liaofuzhan.com/tags/Fabric/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>个人域名企业邮箱</title>
+    <link href="https://www.liaofuzhan.com/posts/3598618716.html"/>
+    <id>https://www.liaofuzhan.com/posts/3598618716.html</id>
+    <published>2019-12-06T11:33:01.000Z</published>
+    <updated>2019-12-08T02:42:51.062Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!-- build time:Sat Dec 14 2019 15:36:01 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;自本站开启了邮件订阅后，基于 Mailchimp 实现的代发功能很容易被其它邮件服务器标为垃圾邮件，一定程度上影响了订阅邮件的正常投递，主要是没有验证独立域名、设置 Mailchimp 提供的 DKIM / SPF 的 DNS 记录的缘故。这需要你拥有自己独立域名的邮箱，比如我近期申请的 ZOHO 企邮，后缀就是自己的域名。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="tech" scheme="https://www.liaofuzhan.com/categories/tech/"/>
+    
+    
+      <category term="Mailchimp" scheme="https://www.liaofuzhan.com/tags/Mailchimp/"/>
+    
+      <category term="订阅" scheme="https://www.liaofuzhan.com/tags/%E8%AE%A2%E9%98%85/"/>
+    
+      <category term="企业邮箱" scheme="https://www.liaofuzhan.com/tags/%E4%BC%81%E4%B8%9A%E9%82%AE%E7%AE%B1/"/>
+    
+      <category term="ZOHO" scheme="https://www.liaofuzhan.com/tags/ZOHO/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>年冬初雪</title>
+    <link href="https://www.liaofuzhan.com/posts/3058510804.html"/>
+    <id>https://www.liaofuzhan.com/posts/3058510804.html</id>
+    <published>2019-11-30T12:49:28.000Z</published>
+    <updated>2019-12-02T05:18:30.250Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!-- build time:Sat Dec 14 2019 15:36:01 GMT+0800 (GMT+08:00) --&gt;&lt;div class=&quot;group-picture&quot;&gt;&lt;div class=&quot;group-picture-container&quot;&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;div class=&quot;group-picture-column&quot; style=&quot;width:100%&quot;&gt;&lt;img class=&quot;index_img_class&quot; src=&quot;https://s2.ax1x.com/2019/11/30/QZML3d.jpg&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://www.liaofuzhan.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="https://www.liaofuzhan.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="北京" scheme="https://www.liaofuzhan.com/tags/%E5%8C%97%E4%BA%AC/"/>
+    
+      <category term="雪" scheme="https://www.liaofuzhan.com/tags/%E9%9B%AA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于Mailchimp实现邮件订阅功能</title>
+    <link href="https://www.liaofuzhan.com/posts/4068965437.html"/>
+    <id>https://www.liaofuzhan.com/posts/4068965437.html</id>
+    <published>2019-11-09T09:39:37.000Z</published>
+    <updated>2019-12-08T02:42:51.065Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!-- build time:Sat Dec 14 2019 15:36:01 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;前段时间，给自己的小站添加的订阅功能，主要是通过 Mailchimp 提供的 Signup forms 和 Landing page 做的。MailChimp 是一款提供邮件营销服务的老牌产品了，很多大企业都在用，普通用户每月可享受 10000 封免费邮件发送服务，可增加用户总数为 2000 个，具体的免费额度可在个人中心 –&amp;gt; Account 下进行查看。这里整理了部分有关于 Mailchimp 邮件订阅这方面的个人 Demo，供大家参考，&lt;a href=&quot;https://mailchi.mp/e92415d27722/leaf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;点此&lt;/a&gt; 可体验本站订阅功能。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="tech" scheme="https://www.liaofuzhan.com/categories/tech/"/>
+    
+    
+      <category term="Mailchimp" scheme="https://www.liaofuzhan.com/tags/Mailchimp/"/>
+    
+      <category term="RSS" scheme="https://www.liaofuzhan.com/tags/RSS/"/>
+    
+      <category term="邮件订阅" scheme="https://www.liaofuzhan.com/tags/%E9%82%AE%E4%BB%B6%E8%AE%A2%E9%98%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一年一度万圣节</title>
+    <link href="https://www.liaofuzhan.com/posts/299207420.html"/>
+    <id>https://www.liaofuzhan.com/posts/299207420.html</id>
+    <published>2019-10-31T09:50:58.000Z</published>
+    <updated>2019-11-20T09:12:28.790Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!-- build time:Sat Dec 14 2019 15:36:01 GMT+0800 (GMT+08:00) --&gt;&lt;div class=&quot;group-picture&quot;&gt;&lt;div class=&quot;group-picture-container&quot;&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;div class=&quot;group-picture-column&quot; style=&quot;width:100%&quot;&gt;&lt;img class=&quot;index_img_class&quot; src=&quot;https://s2.ax1x.com/2019/10/31/KouDje.gif&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://www.liaofuzhan.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="https://www.liaofuzhan.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="万圣节" scheme="https://www.liaofuzhan.com/tags/%E4%B8%87%E5%9C%A3%E8%8A%82/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>京郊赏红叶之行</title>
+    <link href="https://www.liaofuzhan.com/posts/1259393631.html"/>
+    <id>https://www.liaofuzhan.com/posts/1259393631.html</id>
+    <published>2019-10-27T10:25:28.000Z</published>
+    <updated>2019-12-02T05:18:30.254Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!-- build time:Sat Dec 14 2019 15:36:01 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;北京的秋天，像突然转凉的天气一样，在措不及防之时，已是漫山遍野的秋意。秋短且浓烈，已是赏红叶的最佳时节。香山的红叶出了名，不过就是人太多，工作日尚且如此，何况周末。和朋友合计了下，反正我俩以前也去过，这次就换个地儿。参考了网上赏红叶相关的攻略，决定自驾前往房山红井路——北京醉美的一条乡村公路！&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://www.liaofuzhan.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="https://www.liaofuzhan.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="京郊" scheme="https://www.liaofuzhan.com/tags/%E4%BA%AC%E9%83%8A/"/>
+    
+      <category term="自驾" scheme="https://www.liaofuzhan.com/tags/%E8%87%AA%E9%A9%BE/"/>
+    
+      <category term="红叶" scheme="https://www.liaofuzhan.com/tags/%E7%BA%A2%E5%8F%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>本站已开通订阅功能</title>
+    <link href="https://www.liaofuzhan.com/posts/3121170261.html"/>
+    <id>https://www.liaofuzhan.com/posts/3121170261.html</id>
+    <published>2019-10-24T14:24:16.000Z</published>
+    <updated>2019-11-20T09:12:28.789Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!-- build time:Sat Dec 14 2019 15:36:01 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;本小站新开通订阅功能，欢迎大家体验，祝大家 1024 节快乐！&lt;/p&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   /$$    /$$$$$$   /$$$$$$  /$$   /$$&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; /$$$$   /$$$_  $$ /$$__  $$| $$  | $$&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|_  $$  | $$$$\ $$|__/  \ $$| $$  | $$&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  | $$  | $$ $$ $$  /$$$$$$/| $$$$$$$$&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  | $$  | $$\ $$$$ /$$____/ |_____  $$&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  | $$  | $$ \ $$$| $$            | $$&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; /$$$$$$|  $$$$$$/| $$$$$$$$      | $$&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|______/ \______/ |________/      |__/&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>浏览器控制台个性化输出</title>
+    <link href="https://www.liaofuzhan.com/posts/3274212224.html"/>
+    <id>https://www.liaofuzhan.com/posts/3274212224.html</id>
+    <published>2019-10-17T04:23:55.000Z</published>
+    <updated>2019-12-02T05:18:30.247Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!-- build time:Sat Dec 14 2019 15:36:01 GMT+0800 (GMT+08:00) --&gt;&lt;div class=&quot;group-picture&quot;&gt;&lt;div class=&quot;group-picture-container&quot;&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;div class=&quot;group-picture-column&quot; style=&quot;width:100%&quot;&gt;&lt;img class=&quot;index_img_class&quot; src=&quot;https://s2.ax1x.com/2019/10/17/KAAkkD.jpg&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="Hexo NexT" scheme="https://www.liaofuzhan.com/categories/Hexo-NexT/"/>
+    
+    
+      <category term="Hexo NexT" scheme="https://www.liaofuzhan.com/tags/Hexo-NexT/"/>
+    
+      <category term="浏览器" scheme="https://www.liaofuzhan.com/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+    
+      <category term="Console" scheme="https://www.liaofuzhan.com/tags/Console/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一款炫丽的网页播放器插件</title>
+    <link href="https://www.liaofuzhan.com/posts/2636059693.html"/>
+    <id>https://www.liaofuzhan.com/posts/2636059693.html</id>
+    <published>2019-10-13T11:50:33.000Z</published>
+    <updated>2019-11-20T09:12:28.789Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!-- build time:Sat Dec 14 2019 15:36:01 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;网上看到一款挺不错的基于 HTML 5 实现的播放器插件，支持多平台音乐解析、精准LRC歌词、智能记忆、视频播放等多种功能。目前可免费使用，只需注册即可 DIY。作者表明自己是个&lt;strong&gt;初！中！生！&lt;/strong&gt;，在 2016 年用业余时间写的，惊呆了！大神无处不在！目前每天的访问量 10W+，用的人还是挺多的，本站点也进行了集成，可在左下角体验效果。对了，这款插件叫——绚丽彩虹播放器，以下附上部分效果截图。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Hexo NexT" scheme="https://www.liaofuzhan.com/categories/Hexo-NexT/"/>
+    
+    
+      <category term="Hexo NexT" scheme="https://www.liaofuzhan.com/tags/Hexo-NexT/"/>
+    
+      <category term="HTML5 插件" scheme="https://www.liaofuzhan.com/tags/HTML5-%E6%8F%92%E4%BB%B6/"/>
+    
+      <category term="播放器" scheme="https://www.liaofuzhan.com/tags/%E6%92%AD%E6%94%BE%E5%99%A8/"/>
+    
+      <category term="BadApplePlayer" scheme="https://www.liaofuzhan.com/tags/BadApplePlayer/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MySQL事务隔离级别和锁</title>
+    <link href="https://www.liaofuzhan.com/posts/2408076579.html"/>
+    <id>https://www.liaofuzhan.com/posts/2408076579.html</id>
+    <published>2019-10-07T10:00:06.000Z</published>
+    <updated>2019-11-20T09:12:28.783Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!-- build time:Sat Dec 14 2019 15:36:01 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;数据库为了维护事务的几种性质，尤其是一致性和隔离性，一般使用加锁这种方式。同时数据库又是个高并发的应用，同一时间会有大量的并发访问，如果加锁过度，会极大的降低并发处理能力。所以对于加锁的处理，可以说就是数据库对于事务处理的精髓所在。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="数据库" scheme="https://www.liaofuzhan.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="数据库" scheme="https://www.liaofuzhan.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+      <category term="MySql" scheme="https://www.liaofuzhan.com/tags/MySql/"/>
+    
+      <category term="事务" scheme="https://www.liaofuzhan.com/tags/%E4%BA%8B%E5%8A%A1/"/>
+    
+      <category term="锁" scheme="https://www.liaofuzhan.com/tags/%E9%94%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>转手两张演唱会门票</title>
+    <link href="https://www.liaofuzhan.com/posts/405433715.html"/>
+    <id>https://www.liaofuzhan.com/posts/405433715.html</id>
+    <published>2019-10-06T06:56:29.000Z</published>
+    <updated>2019-11-20T09:12:28.791Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!-- build time:Sat Dec 14 2019 15:36:01 GMT+0800 (GMT+08:00) --&gt;&lt;div class=&quot;group-picture&quot;&gt;&lt;div class=&quot;group-picture-container&quot;&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;div class=&quot;group-picture-column&quot; style=&quot;width:100%&quot;&gt;&lt;img class=&quot;index_img_class&quot; src=&quot;https://s2.ax1x.com/2019/10/18/KZGdTU.jpg&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://www.liaofuzhan.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="https://www.liaofuzhan.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="许巍" scheme="https://www.liaofuzhan.com/tags/%E8%AE%B8%E5%B7%8D/"/>
+    
+      <category term="演唱会" scheme="https://www.liaofuzhan.com/tags/%E6%BC%94%E5%94%B1%E4%BC%9A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>街拍共和国70年庆典</title>
+    <link href="https://www.liaofuzhan.com/posts/3459101210.html"/>
+    <id>https://www.liaofuzhan.com/posts/3459101210.html</id>
+    <published>2019-10-03T07:12:28.000Z</published>
+    <updated>2019-12-02T05:18:30.257Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!-- build time:Sat Dec 14 2019 15:36:01 GMT+0800 (GMT+08:00) --&gt;&lt;div id=&quot;dplayer0&quot; class=&quot;dplayer hexo-tag-dplayer-mark&quot; style=&quot;margin-bottom:20px&quot;&gt;&lt;/div&gt;&lt;script&gt;!function(){var e=new DPlayer({container:document.getElementById(&quot;dplayer0&quot;),theme:&quot;#FADFA3&quot;,loop:!0,video:{url:&quot;https://www.liaofuzhan.com/video/20191001.mp4&quot;,pic:&quot;https://s2.ax1x.com/2019/10/18/KZJN3d.jpg&quot;}});window.dplayers||(window.dplayers=[]),window.dplayers.push(e)}()&lt;/script&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://www.liaofuzhan.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="https://www.liaofuzhan.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="国庆" scheme="https://www.liaofuzhan.com/tags/%E5%9B%BD%E5%BA%86/"/>
+    
+      <category term="70年" scheme="https://www.liaofuzhan.com/tags/70%E5%B9%B4/"/>
+    
+      <category term="阅兵" scheme="https://www.liaofuzhan.com/tags/%E9%98%85%E5%85%B5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo博客优化与加速</title>
+    <link href="https://www.liaofuzhan.com/posts/1599400735.html"/>
+    <id>https://www.liaofuzhan.com/posts/1599400735.html</id>
+    <published>2019-09-29T13:28:27.000Z</published>
+    <updated>2019-11-20T09:12:28.788Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!-- build time:Sat Dec 14 2019 15:36:01 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;由于博客部署在 GitHub Pages，服务器在美国，在国内部分地区访问速度比较慢而且还不是很稳定。在尝试将博客加载的google字体库切换成烧饼博客提供的加速站点后，网站响应速度有一定提升。然后就是使用了 InstantClick 和 hexo 的两个插件 hexo-service-worker、 hexo-filter-optimize 来提速，期间也接触了下 PWA，下边将分别介绍。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Hexo NexT" scheme="https://www.liaofuzhan.com/categories/Hexo-NexT/"/>
+    
+    
+      <category term="Hexo NexT" scheme="https://www.liaofuzhan.com/tags/Hexo-NexT/"/>
+    
+      <category term="Google" scheme="https://www.liaofuzhan.com/tags/Google/"/>
+    
+      <category term="优化" scheme="https://www.liaofuzhan.com/tags/%E4%BC%98%E5%8C%96/"/>
+    
+      <category term="加速" scheme="https://www.liaofuzhan.com/tags/%E5%8A%A0%E9%80%9F/"/>
+    
+      <category term="GitHub" scheme="https://www.liaofuzhan.com/tags/GitHub/"/>
+    
+      <category term="Chrome" scheme="https://www.liaofuzhan.com/tags/Chrome/"/>
+    
+      <category term="InstantClick" scheme="https://www.liaofuzhan.com/tags/InstantClick/"/>
+    
+      <category term="Service Worker" scheme="https://www.liaofuzhan.com/tags/Service-Worker/"/>
+    
+      <category term="PWA" scheme="https://www.liaofuzhan.com/tags/PWA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>随笔—影像70年</title>
+    <link href="https://www.liaofuzhan.com/posts/3781861675.html"/>
+    <id>https://www.liaofuzhan.com/posts/3781861675.html</id>
+    <published>2019-09-26T09:57:59.000Z</published>
+    <updated>2019-12-02T05:18:30.261Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!-- build time:Sat Dec 14 2019 15:36:01 GMT+0800 (GMT+08:00) --&gt;&lt;div id=&quot;dplayer2&quot; class=&quot;dplayer hexo-tag-dplayer-mark&quot; style=&quot;margin-bottom:20px&quot;&gt;&lt;/div&gt;&lt;script&gt;!function(){var e=new DPlayer({container:document.getElementById(&quot;dplayer2&quot;),theme:&quot;#FADFA3&quot;,loop:!0,video:{url:&quot;https://www.liaofuzhan.com/video/开国大典.mp4&quot;,pic:&quot;https://s2.ax1x.com/2019/10/18/KZJLvR.jpg&quot;}});window.dplayers||(window.dplayers=[]),window.dplayers.push(e)}()&lt;/script&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://www.liaofuzhan.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="https://www.liaofuzhan.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="国庆" scheme="https://www.liaofuzhan.com/tags/%E5%9B%BD%E5%BA%86/"/>
+    
+      <category term="70年" scheme="https://www.liaofuzhan.com/tags/70%E5%B9%B4/"/>
+    
+      <category term="影像" scheme="https://www.liaofuzhan.com/tags/%E5%BD%B1%E5%83%8F/"/>
+    
+      <category term="档案" scheme="https://www.liaofuzhan.com/tags/%E6%A1%A3%E6%A1%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>本站主题已整理开源</title>
+    <link href="https://www.liaofuzhan.com/posts/273344197.html"/>
+    <id>https://www.liaofuzhan.com/posts/273344197.html</id>
+    <published>2019-09-25T08:26:16.000Z</published>
+    <updated>2019-12-02T05:18:30.244Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!-- build time:Sat Dec 14 2019 15:36:01 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;应部分朋友邀请，本站主题已整理开源，点击本站右上角 &lt;a href=&quot;https://github.com/leafjame/hexo-theme-next5-leaf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;fork me from github&lt;/a&gt; 前往，希望大家多多支持，欢迎&lt;strong&gt;star&lt;/strong&gt;和&lt;strong&gt;fork&lt;/strong&gt;。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Hexo NexT" scheme="https://www.liaofuzhan.com/categories/Hexo-NexT/"/>
+    
+    
+      <category term="Hexo NexT" scheme="https://www.liaofuzhan.com/tags/Hexo-NexT/"/>
+    
+      <category term="分享" scheme="https://www.liaofuzhan.com/tags/%E5%88%86%E4%BA%AB/"/>
+    
+      <category term="Github" scheme="https://www.liaofuzhan.com/tags/Github/"/>
+    
+      <category term="开源" scheme="https://www.liaofuzhan.com/tags/%E5%BC%80%E6%BA%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo NexT主题之自定义标签页</title>
+    <link href="https://www.liaofuzhan.com/posts/4158923031.html"/>
+    <id>https://www.liaofuzhan.com/posts/4158923031.html</id>
+    <published>2019-09-23T06:54:23.000Z</published>
+    <updated>2019-12-02T05:18:30.215Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!-- build time:Sat Dec 14 2019 15:36:01 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;在 NexT 主题自带的标签页中，标签以简单的列表形式进行展示，只加了随机字体大小，并没有其它特别的样式。当标签多了以后，页面被挤得满满当当，不是很美观。github 有相关的标签云插件，比如 &lt;a href=&quot;https://github.com/MikeCoder/hexo-tag-cloud&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo Tag Cloud&lt;/a&gt; 这款，将标签以立体的效果进行展示，看起来还是不错的。按要求配置后，标签云显示在侧栏 sidebar 区域，之后因侧栏放了别的插件，我将其挪到了单独的标签页。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Hexo NexT" scheme="https://www.liaofuzhan.com/categories/Hexo-NexT/"/>
+    
+    
+      <category term="Hexo NexT" scheme="https://www.liaofuzhan.com/tags/Hexo-NexT/"/>
+    
+      <category term="自定义" scheme="https://www.liaofuzhan.com/tags/%E8%87%AA%E5%AE%9A%E4%B9%89/"/>
+    
+      <category term="hexo-tag-cloud" scheme="https://www.liaofuzhan.com/tags/hexo-tag-cloud/"/>
+    
+      <category term="标签" scheme="https://www.liaofuzhan.com/tags/%E6%A0%87%E7%AD%BE/"/>
+    
+      <category term="标签云" scheme="https://www.liaofuzhan.com/tags/%E6%A0%87%E7%AD%BE%E4%BA%91/"/>
+    
+      <category term="心形" scheme="https://www.liaofuzhan.com/tags/%E5%BF%83%E5%BD%A2/"/>
+    
+      <category term="球型" scheme="https://www.liaofuzhan.com/tags/%E7%90%83%E5%9E%8B/"/>
+    
+      <category term="气泡" scheme="https://www.liaofuzhan.com/tags/%E6%B0%94%E6%B3%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo NexT主题美化2.0</title>
+    <link href="https://www.liaofuzhan.com/posts/2114475547.html"/>
+    <id>https://www.liaofuzhan.com/posts/2114475547.html</id>
+    <published>2019-09-21T07:55:24.000Z</published>
+    <updated>2019-12-02T06:49:30.271Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!-- build time:Sat Dec 14 2019 15:36:01 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;近期，对本站一番魔改，视觉效果全面提升。新加的功能诸如主页轮播图、评论邮件通知、标签页美化、归档页美化、博客相册、文章推荐等。小改的地方包括页面分享功能、鼠标样式、类知乎卡片页…关于魔改，仁者见仁智者见智，在此记录一下相关功能的具体实现。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Hexo NexT" scheme="https://www.liaofuzhan.com/categories/Hexo-NexT/"/>
+    
+    
+      <category term="Hexo NexT" scheme="https://www.liaofuzhan.com/tags/Hexo-NexT/"/>
+    
+      <category term="相册" scheme="https://www.liaofuzhan.com/tags/%E7%9B%B8%E5%86%8C/"/>
+    
+      <category term="标签" scheme="https://www.liaofuzhan.com/tags/%E6%A0%87%E7%AD%BE/"/>
+    
+      <category term="分享" scheme="https://www.liaofuzhan.com/tags/%E5%88%86%E4%BA%AB/"/>
+    
+      <category term="轮播图" scheme="https://www.liaofuzhan.com/tags/%E8%BD%AE%E6%92%AD%E5%9B%BE/"/>
+    
+      <category term="valine" scheme="https://www.liaofuzhan.com/tags/valine/"/>
+    
+      <category term="valine-admin" scheme="https://www.liaofuzhan.com/tags/valine-admin/"/>
+    
+      <category term="邮件" scheme="https://www.liaofuzhan.com/tags/%E9%82%AE%E4%BB%B6/"/>
+    
+      <category term="归档" scheme="https://www.liaofuzhan.com/tags/%E5%BD%92%E6%A1%A3/"/>
+    
+      <category term="推荐" scheme="https://www.liaofuzhan.com/tags/%E6%8E%A8%E8%8D%90/"/>
+    
+      <category term="鼠标" scheme="https://www.liaofuzhan.com/tags/%E9%BC%A0%E6%A0%87/"/>
+    
+      <category term="知乎" scheme="https://www.liaofuzhan.com/tags/%E7%9F%A5%E4%B9%8E/"/>
+    
+      <category term="卡片" scheme="https://www.liaofuzhan.com/tags/%E5%8D%A1%E7%89%87/"/>
+    
+      <category term="评分" scheme="https://www.liaofuzhan.com/tags/%E8%AF%84%E5%88%86/"/>
+    
+      <category term="魔方" scheme="https://www.liaofuzhan.com/tags/%E9%AD%94%E6%96%B9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>随笔—过节那点事</title>
+    <link href="https://www.liaofuzhan.com/posts/2291078664.html"/>
+    <id>https://www.liaofuzhan.com/posts/2291078664.html</id>
+    <published>2019-09-20T07:22:37.000Z</published>
+    <updated>2019-11-20T09:12:28.792Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!-- build time:Sat Dec 14 2019 15:36:01 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;结束了陪亲友的五天北京之行，终于能闲下来一会了，中秋节浑浑噩噩一过，又回到了原来的状态，记录下这期间所发生的一些琐事，生活还得继续…&lt;/p&gt;&lt;h4 id=&quot;9月11日-多云-北京站&quot;&gt;&lt;a href=&quot;#9月11日-多云-北京站&quot; class=&quot;headerlink&quot; title=&quot;9月11日 多云 北京站&quot;&gt;&lt;/a&gt;9月11日 多云 北京站&lt;/h4&gt;&lt;p&gt;节前两天，女票买了回松原的动车票。眼看就要过节了，也没啥送的，就送她回家吧！当天正值911，和她聊了下这方面的事情，一问N不知，场面一度尴尬。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://www.liaofuzhan.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="https://www.liaofuzhan.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="北京" scheme="https://www.liaofuzhan.com/tags/%E5%8C%97%E4%BA%AC/"/>
+    
+      <category term="中秋节" scheme="https://www.liaofuzhan.com/tags/%E4%B8%AD%E7%A7%8B%E8%8A%82/"/>
+    
+      <category term="过节" scheme="https://www.liaofuzhan.com/tags/%E8%BF%87%E8%8A%82/"/>
+    
+      <category term="面试" scheme="https://www.liaofuzhan.com/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>随笔—科学上网篇</title>
+    <link href="https://www.liaofuzhan.com/posts/2502282703.html"/>
+    <id>https://www.liaofuzhan.com/posts/2502282703.html</id>
+    <published>2019-09-11T08:13:57.000Z</published>
+    <updated>2019-11-20T09:12:28.792Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!-- build time:Sat Dec 14 2019 15:36:01 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;在做SEO时，本站已接入谷歌搜索，电脑是能科学上网了。最近想着给手机上也整一下，于是就开始了一翻捣鼓…首先说一下电脑端，比较流行的如SSR（酸酸乳），未科学上网之前，只能在&lt;a href=&quot;https://github.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;github&lt;/a&gt;上找解决方案：&lt;strong&gt;Shadowsock for mac&lt;/strong&gt;。下载地址有对应Windows版本的，根据你的系统进行下载。解压打开应用后，有7天的免费期，然后就能科学上网了。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://www.liaofuzhan.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="Google" scheme="https://www.liaofuzhan.com/tags/Google/"/>
+    
+      <category term="随笔" scheme="https://www.liaofuzhan.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="科学上网" scheme="https://www.liaofuzhan.com/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+    
+      <category term="Shadowsock" scheme="https://www.liaofuzhan.com/tags/Shadowsock/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo NexT主题移动端样式适配</title>
+    <link href="https://www.liaofuzhan.com/posts/507826828.html"/>
+    <id>https://www.liaofuzhan.com/posts/507826828.html</id>
+    <published>2019-08-31T03:23:29.000Z</published>
+    <updated>2019-11-20T09:12:28.784Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!-- build time:Sat Dec 14 2019 15:36:01 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;自己的博客搭建也有一段时间了，期间整合了挺多个性化功能，都是基于PC端而做的。最近在推自己小站时，朋友间的分享都是基于手机，然而NexT自有的样式在移动端的效果并不大理想，遂萌生了样式适配的想法。Next主题有预留给用户自定义css样式的文件：custom.styl，在这里可以添加自己喜欢的样式代码。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Hexo NexT" scheme="https://www.liaofuzhan.com/categories/Hexo-NexT/"/>
+    
+    
+      <category term="Hexo NexT" scheme="https://www.liaofuzhan.com/tags/Hexo-NexT/"/>
+    
+      <category term="样式" scheme="https://www.liaofuzhan.com/tags/%E6%A0%B7%E5%BC%8F/"/>
+    
+      <category term="自定义" scheme="https://www.liaofuzhan.com/tags/%E8%87%AA%E5%AE%9A%E4%B9%89/"/>
+    
+      <category term="移动端" scheme="https://www.liaofuzhan.com/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/"/>
+    
+      <category term="手机" scheme="https://www.liaofuzhan.com/tags/%E6%89%8B%E6%9C%BA/"/>
+    
+      <category term="适配" scheme="https://www.liaofuzhan.com/tags/%E9%80%82%E9%85%8D/"/>
+    
+  </entry>
+  
+</feed>
