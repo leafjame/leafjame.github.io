@@ -5,7 +5,13 @@ Allow: /categories/
 Allow: /tags/
 Allow: /xiaohutong/
 Allow: /about/
+Allow: /life/
+Allow: /love/
+Allow: /top/
+Allow: /photos/
 Allow: /links/
+Allow: /books/
+Allow: /movies/
 
 Disallow: /vendors/
 Disallow: /js/
