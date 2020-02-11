@@ -119,13 +119,13 @@
         #List li a:nth-child(3){
             left:0;
             top:0;
-            background:url("https://s2.ax1x.com/2020/02/10/15aWxf.jpg");
+            background:url("https://s2.ax1x.com/2020/02/10/150FKK.jpg");
             transform:translateZ(-360px) rotateX(180deg);
         }
         #List li a:nth-child(4){
             left:0;
             top:100%;
-            background:url("https://s2.ax1x.com/2020/02/10/150FKK.jpg");
+            background:url("https://s2.ax1x.com/2020/02/10/15aWxf.jpg");
             transform-origin:top;
             transform:rotateX(-90deg);
         }
@@ -235,12 +235,17 @@
                 }
             }
 
+            var _index = 0;
             show_pic();
 
             function show_pic() {
+                if(_index >= oBtn.length){
+                    _index = 0;
+                }
                 var t = setTimeout(show_pic, 5000);
-                var _index = parseInt(Math.random() * 4);
+                // var _index = parseInt(Math.random() * oBtn.length);
                 oBtn[_index].onclick();
+                _index++;
             }
         };
 
