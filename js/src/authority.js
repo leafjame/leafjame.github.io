@@ -1,3 +1,3 @@
-// build time:Wed Mar 04 2020 13:40:34 GMT+0800 (GMT+08:00)
+// build time:Wed Mar 04 2020 13:49:45 GMT+0800 (GMT+08:00)
 document.addEventListener("keydown",function(e){var t=navigator.platform.match("Mac")?e.metaKey:e.ctrlKey;if(e.keyCode==123){e.preventDefault()}else if(t&&e.keyCode==83){e.preventDefault()}else if(t&&e.keyCode==67){e.preventDefault()}else if(t&&e.shiftKey&&e.keyCode==73){e.preventDefault()}else if(t&&e.keyCode==85){e.preventDefault()}else if(t&&e.shiftKey||t&&e.altKey||e.shiftKey&&e.altKey){e.preventDefault()}else if(e.shiftKey&&e.keyCode==121){e.preventDefault()}},false);document.oncontextmenu=function(){return false};document.body.oncopy=function(e){};document.body.onpaste=function(){};document.onselectstart=function(e){};
 //rebuild by neat 
