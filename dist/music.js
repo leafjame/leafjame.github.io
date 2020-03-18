@@ -1,3 +1,3 @@
-// build time:Wed Mar 18 2020 22:15:27 GMT+0800 (GMT+08:00)
+// build time:Wed Mar 18 2020 23:13:48 GMT+0800 (GMT+08:00)
 const ap=new APlayer({container:document.getElementById("aplayer"),fixed:true,autoplay:false,lrcType:0,audio:[{name:"无尽光芒",artist:"许巍",url:"https://cdn.jsdelivr.net/gh/leafjame/cdn/music/无尽光芒.mp3",cover:"https://cdn.jsdelivr.net/gh/leafjame/cdn/img/articles/15/1.jpg"},{name:"夕阳中的城市",artist:"许巍",url:"https://cdn.jsdelivr.net/gh/leafjame/cdn/music/夕阳中的城市.mp3",cover:"https://cdn.jsdelivr.net/gh/leafjame/cdn/img/articles/15/1.jpg"},{name:"心中的歌谣",artist:"许巍",url:"https://cdn.jsdelivr.net/gh/leafjame/cdn/music/心中的歌谣.mp3",cover:"https://cdn.jsdelivr.net/gh/leafjame/cdn/img/articles/15/1.jpg"},{name:"远航",artist:"许巍",url:"https://cdn.jsdelivr.net/gh/leafjame/cdn/music/远航.mp3",cover:"https://cdn.jsdelivr.net/gh/leafjame/cdn/img/articles/15/1.jpg"}]});
 //rebuild by neat 
