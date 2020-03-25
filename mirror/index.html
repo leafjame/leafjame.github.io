@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>镜子网站</title>
+<link rel="stylesheet" href="common.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
+</head>	
+
+<body oncontextmenu="return false" ondragstart="return false">
+
+<div id="wrapper">
+	<div class="skinBg" style="background-image:url('fox.jpg');"></div>
+	<header id="header">
+	
+		<div class="weather fl">
+			<span class="pollution">
+				<span><a class="tc" href="https://www.liaofuzhan.com" target="_blank">北宸</a></span>
+			</span>
+		</div>
+		
+		<nav class="headNavs fr tr">
+			<a href="https://www.liaofuzhan.com/mirror/mirror.html#"><span class="s-icon s-icon-treasure"></span><span>宝箱</span></a>
+			<a href="https://www.liaofuzhan.com/mirror/mirror.html#"><span class="s-icon s-icon-skin"></span><span>换肤</span></a>
+			<a href="https://www.liaofuzhan.com/mirror/mirror.html#"><span class="s-icon s-icon-msg"></span><span>消息</span></a>
+			<a><span class="s-icon s-icon-line"></span></a>
+			<a href="https://www.liaofuzhan.com/mirror/mirror.html#"><span>设为首页</span></a>
+			<a href="javascript:;" class="uname"><span>更多</span><span class="user-arrow"></span></a>
+			<div class="topMenus dn">
+				<span class="arrowTop"></span>
+				<a href="https://www.liaofuzhan.com/mirror/mirror.html#">个人中心</a>
+				<a href="https://www.liaofuzhan.com/mirror/mirror.html#">帐号设置</a>
+				<a href="https://www.liaofuzhan.com/mirror/mirror.html#">搜索设置</a>
+				<a href="https://www.liaofuzhan.com/mirror/mirror.html#">高级搜索</a>
+				<a href="https://www.liaofuzhan.com/mirror/mirror.html#">安全退出</a>
+			</div>
+		</nav>
+	</header>
+	<div class="content tc">
+		<br><br><br><br>
+		<p class="logo">
+			<img width="270" height="120" src="mirror.jpg" alt="logo">
+		</p>
+		
+		<br><br>
+		
+		<nav class="mainNavs">
+			<a href="https://www.liaofuzhan.com/mirror/mirror.html#">新闻</a>
+			<a href="https://www.liaofuzhan.com/mirror/mirror.html#">网页</a>
+			<a href="https://www.liaofuzhan.com/mirror/mirror.html#">贴吧</a>
+			<a href="https://www.liaofuzhan.com/mirror/mirror.html#">知道</a>
+			<a href="https://www.liaofuzhan.com/mirror/mirror.html#">音乐</a>
+			<a href="https://www.liaofuzhan.com/mirror/mirror.html#">图片</a>
+			<a href="https://www.liaofuzhan.com/mirror/mirror.html#">视频</a>
+			<a href="https://www.liaofuzhan.com/mirror/mirror.html#">地图</a>
+			<a href="https://www.liaofuzhan.com/mirror/mirror.html#">百科</a>
+			<a href="https://www.liaofuzhan.com/mirror/mirror.html#">文库</a>
+			<a href="https://www.liaofuzhan.com/mirror/mirror.html#">更多 &gt;&gt;</a>
+		</nav>
+		
+		<div class="searchBox">
+			<form action="http://localhost:4000/mirror/mirror.html">
+				<input type="text" value="https://" class="searchIpt f14" name="url" maxlength="100" autocomplete="off">
+				<input type="submit" class="btn cp" value="Duang一下">
+			</form>
+		</div>
+		<br><br><br><br><br><br><br><br><br><br>
+		<footer id="footer" class="tc">Copyright © 2020. All Rights Reserved. <a class="tc" href="https://www.liaofuzhan.com" target="_blank">Leaface</a></footer>
+</div>
+
+<script>
+$('.uname,.topMenus').hover(function(){
+	$('.topMenus').stop(true,true).fadeIn(200);
+},function(){
+	$('.topMenus').stop(true,true).delay(500).fadeOut(200);
+});
+</script>
+
+</div>
+</body></html>
