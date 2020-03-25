@@ -5,11 +5,16 @@
 <link rel="stylesheet" href="common.css">
 <script src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
 </head>	
-
+∂
 <body oncontextmenu="return false" ondragstart="return false">
 
 <div id="wrapper">
-	<div class="skinBg" style="background-image:url('fox.jpg');"></div>
+	<div class="skinBg" style="
+		background-image:url('fox.jpg');
+		background-repeat:no-repeat;
+		background-size:100% 100%;
+		-moz-background-size:100% 100%;">
+	</div>
 	<header id="header">
 	
 		<div class="weather fl">
@@ -19,12 +24,11 @@
 		</div>
 		
 		<nav class="headNavs fr tr">
-			<a href="https://www.liaofuzhan.com/mirror/mirror.html#"><span class="s-icon s-icon-treasure"></span><span>宝箱</span></a>
-			<a href="https://www.liaofuzhan.com/mirror/mirror.html#"><span class="s-icon s-icon-skin"></span><span>换肤</span></a>
-			<a href="https://www.liaofuzhan.com/mirror/mirror.html#"><span class="s-icon s-icon-msg"></span><span>消息</span></a>
-			<a><span class="s-icon s-icon-line"></span></a>
-			<a href="https://www.liaofuzhan.com/mirror/mirror.html#"><span>设为首页</span></a>
-			<a href="javascript:;" class="uname"><span>更多</span><span class="user-arrow"></span></a>
+			<a href="https://www.liaofuzhan.com/mirror/mirror.html#">宝箱</a>
+			<a href="https://www.liaofuzhan.com/mirror/mirror.html#">换肤</a>
+			<a href="https://www.liaofuzhan.com/mirror/mirror.html#">消息</a>
+			<a href="https://www.liaofuzhan.com/mirror/mirror.html#">设为首页</a>
+			<a href="javascript:;" class="uname">| 更多</a>
 			<div class="topMenus dn">
 				<span class="arrowTop"></span>
 				<a href="https://www.liaofuzhan.com/mirror/mirror.html#">个人中心</a>
@@ -57,7 +61,7 @@
 			<a href="https://www.liaofuzhan.com/mirror/mirror.html#">更多 &gt;&gt;</a>
 		</nav>
 		
-		<div class="searchBox">
+		<div class="searchBox" style="opacity:0.8">
 			<form action="https://www.liaofuzhan.com/mirror/mirror.html">
 				<input type="text" value="https://" class="searchIpt f14" name="url" maxlength="100" autocomplete="off">
 				<input type="submit" class="btn cp" value="Duang一下">

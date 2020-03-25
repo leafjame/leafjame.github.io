@@ -146,7 +146,7 @@ a:focus {
     left: 0;
     top: 0;
     z-index: -10;
-    background-position: center 0;
+    background-position: center -100px;
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -192,12 +192,13 @@ a:focus {
 }
 
 .headNavs a {
+    color: black;
     padding-right: 5px;
     text-decoration: none;
     display: inline-block;
 }
 
-.headNavs a:hover span {
+.headNavs a:hover {
     text-decoration: underline;
     color: red;
 }
@@ -281,6 +282,7 @@ a:focus {
 }
 
 .mainNavs {
+    opacity: 0.8;
     margin: 20px auto;
     width: 620px;
     text-align: left;
@@ -297,6 +299,7 @@ a:focus {
 }
 
 .logo img {
+    opacity: 0.6;
     margin: 0 0 -15px;
 }
 
