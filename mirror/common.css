@@ -15,7 +15,7 @@ body {
 img {
     max-width: 100%;
     height: auto;
-    width: auto9;
+    width: auto;
     -ms-interpolation-mode: bicubic;
     vertical-align: middle;
     -moz-animation: fadein 350ms ease-out;
@@ -146,9 +146,9 @@ a:focus {
     left: 0;
     top: 0;
     z-index: -10;
-    background-position: center -100px;
-    background-size: cover;
-    background-attachment: fixed;
+    /*background-position: center -100px;*/
+    /*background-size: cover;*/
+    /*background-attachment: fixed;*/
     background-repeat: no-repeat;
 }
 
@@ -174,7 +174,7 @@ a:focus {
 }
 
 .wI1 {
-    background: url('');
+    /*background: url('');*/
 }
 
 #header span.polutionLevel {
@@ -299,7 +299,7 @@ a:focus {
 }
 
 .logo img {
-    opacity: 0.6;
+    /*opacity: 0.6;*/
     margin: 0 0 -15px;
 }
 
@@ -321,7 +321,7 @@ a:focus {
     background: #DDDDDD;
     background: -moz-linear-gradient(top, #ffffff, #dddddd);
     background: -webkit-linear-gradient(top, #ffffff, #dddddd);
-    background: linear-gradient:(top, #ffffff, #dddddd);
+    background: linear-gradient(top, #ffffff, #dddddd);
     border: 0 none;
     font-size: 16px;
     height: 40px;
@@ -360,7 +360,7 @@ a:focus {
 }
 
 .menusWrapper a.active {
-    background: url('') no-repeat;
+    /*background: url('') no-repeat;*/
 }
 
 .menusWrapper a:hover {
