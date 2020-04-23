@@ -1,3 +1,3 @@
-// build time:Sat Apr 18 2020 14:31:08 GMT+0800 (GMT+08:00)
-!function(t,n,e){var i=function(){var t="";t+='<button class="btn-copy" data-clipboard-snippet="">';t+='  <i class="fa fa-clipboard"></i><span>复制</span>';t+="</button>";$(".highlight .code pre").before(t);new ClipboardJS(".btn-copy",{target:function(t){swal({title:"Copied!",text:"",icon:"success",timer:1500,button:true});return t.nextElementSibling}})};i()}(window,document);
+// build time:Thu Apr 23 2020 11:27:54 GMT+0800 (GMT+08:00)
+!function(t,n,i){initCopyCode()}(window,document);function initCopyCode(){var t="";t+='<button class="btn-copy" data-clipboard-snippet="">';t+='  <i class="fa fa-clipboard"></i><span>复制</span>';t+="</button>";$(".highlight .code pre").before(t);new ClipboardJS(".btn-copy",{target:function(t){swal({title:"Copied!",text:"",icon:"success",timer:1500,button:true});return t.nextElementSibling}})}
 //rebuild by neat 
