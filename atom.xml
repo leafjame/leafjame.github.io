@@ -25,7 +25,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Thu Apr 30 2020 16:22:29 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;本站使用 Cloudflare 提供的 DNS 和 CDN 服务，Cloudflare 是美帝跨国企业，实力强悍，针对个人网站推出了一定的 &lt;a href=&quot;https://www.cloudflare.com/zh-cn/plans/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;免费计划&lt;/a&gt;，注册完账号，添加受保护站点后即可使用，还提供了十分友好的统计和分析界面。文档很详细，使用起来基本没啥问题，接下来主要介绍 Cloudflare 几款实用的应用。&lt;/p&gt;
+      &lt;!-- build time:Thu Apr 30 2020 16:42:29 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;本站使用 Cloudflare 提供的 DNS 和 CDN 服务，Cloudflare 是美帝跨国企业，实力强悍，针对个人网站推出了一定的 &lt;a href=&quot;https://www.cloudflare.com/zh-cn/plans/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;免费计划&lt;/a&gt;，注册完账号，添加受保护站点后即可使用，还提供了十分友好的统计和分析界面。文档很详细，使用起来基本没啥问题，接下来主要介绍 Cloudflare 几款实用的应用。&lt;/p&gt;
     
     </summary>
     
@@ -45,7 +45,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Thu Apr 30 2020 16:22:29 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;公司平台有个系统公告模块，展示的是管理员发布的通知和公告，数据库有公告和公告阅读记录这两张表，后者存有公告 ID 和用户 ID。现在前端需要两个接口：1、当前登录用户未读公告；2、当前登录用户下所有公告，并返回已读、未读标识。需求很简单，在此记录一下。&lt;/p&gt;
+      &lt;!-- build time:Thu Apr 30 2020 16:42:29 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;公司平台有个系统公告模块，展示的是管理员发布的通知和公告，数据库有公告和公告阅读记录这两张表，后者存有公告 ID 和用户 ID。现在前端需要两个接口：1、当前登录用户未读公告；2、当前登录用户下所有公告，并返回已读、未读标识。需求很简单，在此记录一下。&lt;/p&gt;
     
     </summary>
     
@@ -67,7 +67,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Thu Apr 30 2020 16:22:29 GMT+0800 (GMT+08:00) --&gt;&lt;div class=&quot;group-picture&quot;&gt;&lt;div class=&quot;group-picture-container&quot;&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;div class=&quot;group-picture-column&quot; style=&quot;width:100%&quot;&gt;&lt;img class=&quot;index_img_class&quot; src=&quot;https://cdn.jsdelivr.net/gh/leafjame/cdn/img/articles/4/1.jpg&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+      &lt;!-- build time:Thu Apr 30 2020 16:42:29 GMT+0800 (GMT+08:00) --&gt;&lt;div class=&quot;group-picture&quot;&gt;&lt;div class=&quot;group-picture-container&quot;&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;div class=&quot;group-picture-column&quot; style=&quot;width:100%&quot;&gt;&lt;img class=&quot;index_img_class&quot; src=&quot;https://cdn.jsdelivr.net/gh/leafjame/cdn/img/articles/4/1.jpg&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
     
     </summary>
     
@@ -91,7 +91,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Thu Apr 30 2020 16:22:29 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;Lombok 是一款非常实用的工具，通过注解能消除冗长的 Java 代码，工程中需要导入 lombok.jar，相应 IDE 的安装方式可参考 &lt;a href=&quot;https://projectlombok.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;官网&lt;/a&gt;。项目中使用到的注解主要是 @Data 和 @Builder，前一个注解用在类上，相当于同时使用了 @ToString、@EqualsAndHashCode、@Getter、@Setter 和 @RequiredArgsConstrutor；后一个主要用在类、构造器、方法上，能非常方便的实现建造者模式、链式编程，相关文档可参考 &lt;a href=&quot;https://projectlombok.org/features/all&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这里&lt;/a&gt;。&lt;/p&gt;
+      &lt;!-- build time:Thu Apr 30 2020 16:42:29 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;Lombok 是一款非常实用的工具，通过注解能消除冗长的 Java 代码，工程中需要导入 lombok.jar，相应 IDE 的安装方式可参考 &lt;a href=&quot;https://projectlombok.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;官网&lt;/a&gt;。项目中使用到的注解主要是 @Data 和 @Builder，前一个注解用在类上，相当于同时使用了 @ToString、@EqualsAndHashCode、@Getter、@Setter 和 @RequiredArgsConstrutor；后一个主要用在类、构造器、方法上，能非常方便的实现建造者模式、链式编程，相关文档可参考 &lt;a href=&quot;https://projectlombok.org/features/all&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这里&lt;/a&gt;。&lt;/p&gt;
     
     </summary>
     
@@ -113,7 +113,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Thu Apr 30 2020 16:22:29 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;双旦将至，快找个暖冬又暖心的 TA 一起跨年吧！如果你还是一枚单身汪，那么再过几天的时间，又到了别人狂欢你孤单的圣诞之夜！再再再过几天时间，又双叒叕到了别人狂欢你孤单的跨年之夜！落单的人往往最怕过节，更何况双旦佳节的连环暴击，别人疯狂撒着狗粮，而你只能接受着来自情侣们的亿万点伤害，SO，与其不甘寂寞，何不为爱情放纵一次？撩个对象一起过双旦吧，2019 年最后一个脱单的机会，为你呈现 ！&lt;/p&gt;
+      &lt;!-- build time:Thu Apr 30 2020 16:42:29 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;双旦将至，快找个暖冬又暖心的 TA 一起跨年吧！如果你还是一枚单身汪，那么再过几天的时间，又到了别人狂欢你孤单的圣诞之夜！再再再过几天时间，又双叒叕到了别人狂欢你孤单的跨年之夜！落单的人往往最怕过节，更何况双旦佳节的连环暴击，别人疯狂撒着狗粮，而你只能接受着来自情侣们的亿万点伤害，SO，与其不甘寂寞，何不为爱情放纵一次？撩个对象一起过双旦吧，2019 年最后一个脱单的机会，为你呈现 ！&lt;/p&gt;
     
     </summary>
     
@@ -137,7 +137,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Thu Apr 30 2020 16:22:29 GMT+0800 (GMT+08:00) --&gt;&lt;div class=&quot;group-picture&quot;&gt;&lt;div class=&quot;group-picture-container&quot;&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;div class=&quot;group-picture-column&quot; style=&quot;width:100%&quot;&gt;&lt;img class=&quot;index_img_class&quot; src=&quot;https://cdn.jsdelivr.net/gh/leafjame/cdn/img/articles/6/1.jpg&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+      &lt;!-- build time:Thu Apr 30 2020 16:42:29 GMT+0800 (GMT+08:00) --&gt;&lt;div class=&quot;group-picture&quot;&gt;&lt;div class=&quot;group-picture-container&quot;&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;div class=&quot;group-picture-column&quot; style=&quot;width:100%&quot;&gt;&lt;img class=&quot;index_img_class&quot; src=&quot;https://cdn.jsdelivr.net/gh/leafjame/cdn/img/articles/6/1.jpg&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
     
     </summary>
     
@@ -159,7 +159,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Thu Apr 30 2020 16:22:29 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;自本站开启了邮件订阅后，基于 Mailchimp 实现的代发功能很容易被其它邮件服务器标为垃圾邮件，一定程度上影响了订阅邮件的正常投递，主要是没有验证独立域名、设置 Mailchimp 提供的 DKIM / SPF 的 DNS 记录的缘故。这需要你拥有自己独立域名的邮箱，比如我近期申请的 ZOHO 企邮，后缀就是自己的域名。&lt;/p&gt;
+      &lt;!-- build time:Thu Apr 30 2020 16:42:29 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;自本站开启了邮件订阅后，基于 Mailchimp 实现的代发功能很容易被其它邮件服务器标为垃圾邮件，一定程度上影响了订阅邮件的正常投递，主要是没有验证独立域名、设置 Mailchimp 提供的 DKIM / SPF 的 DNS 记录的缘故。这需要你拥有自己独立域名的邮箱，比如我近期申请的 ZOHO 企邮，后缀就是自己的域名。&lt;/p&gt;
     
     </summary>
     
@@ -185,7 +185,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Thu Apr 30 2020 16:22:29 GMT+0800 (GMT+08:00) --&gt;&lt;div class=&quot;group-picture&quot;&gt;&lt;div class=&quot;group-picture-container&quot;&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;div class=&quot;group-picture-column&quot; style=&quot;width:100%&quot;&gt;&lt;img class=&quot;index_img_class&quot; src=&quot;https://cdn.jsdelivr.net/gh/leafjame/cdn/img/articles/8/1.jpg&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+      &lt;!-- build time:Thu Apr 30 2020 16:42:29 GMT+0800 (GMT+08:00) --&gt;&lt;div class=&quot;group-picture&quot;&gt;&lt;div class=&quot;group-picture-container&quot;&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;div class=&quot;group-picture-column&quot; style=&quot;width:100%&quot;&gt;&lt;img class=&quot;index_img_class&quot; src=&quot;https://cdn.jsdelivr.net/gh/leafjame/cdn/img/articles/8/1.jpg&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
     
     </summary>
     
@@ -209,7 +209,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Thu Apr 30 2020 16:22:29 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;前段时间，给自己的小站添加的订阅功能，主要是通过 Mailchimp 提供的 Signup forms 和 Landing page 做的。MailChimp 是一款提供邮件营销服务的老牌产品了，很多大企业都在用，普通用户每月可享受 10000 封免费邮件发送服务，可增加用户总数为 2000 个，具体的免费额度可在个人中心 –&amp;gt; Account 下进行查看。这里整理了部分有关于 Mailchimp 邮件订阅这方面的个人 Demo，供大家参考，&lt;a href=&quot;https://mailchi.mp/e92415d27722/leaf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;点此&lt;/a&gt; 可体验本站订阅功能。&lt;/p&gt;
+      &lt;!-- build time:Thu Apr 30 2020 16:42:29 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;前段时间，给自己的小站添加的订阅功能，主要是通过 Mailchimp 提供的 Signup forms 和 Landing page 做的。MailChimp 是一款提供邮件营销服务的老牌产品了，很多大企业都在用，普通用户每月可享受 10000 封免费邮件发送服务，可增加用户总数为 2000 个，具体的免费额度可在个人中心 –&amp;gt; Account 下进行查看。这里整理了部分有关于 Mailchimp 邮件订阅这方面的个人 Demo，供大家参考，&lt;a href=&quot;https://mailchi.mp/e92415d27722/leaf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;点此&lt;/a&gt; 可体验本站订阅功能。&lt;/p&gt;
     
     </summary>
     
@@ -233,7 +233,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Thu Apr 30 2020 16:22:29 GMT+0800 (GMT+08:00) --&gt;&lt;div class=&quot;group-picture&quot;&gt;&lt;div class=&quot;group-picture-container&quot;&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;div class=&quot;group-picture-column&quot; style=&quot;width:100%&quot;&gt;&lt;img class=&quot;index_img_class&quot; src=&quot;https://cdn.jsdelivr.net/gh/leafjame/cdn/img/articles/10/1.gif&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+      &lt;!-- build time:Thu Apr 30 2020 16:42:29 GMT+0800 (GMT+08:00) --&gt;&lt;div class=&quot;group-picture&quot;&gt;&lt;div class=&quot;group-picture-container&quot;&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;div class=&quot;group-picture-column&quot; style=&quot;width:100%&quot;&gt;&lt;img class=&quot;index_img_class&quot; src=&quot;https://cdn.jsdelivr.net/gh/leafjame/cdn/img/articles/10/1.gif&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
     
     </summary>
     
@@ -255,7 +255,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Thu Apr 30 2020 16:22:29 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;北京的秋天，像突然转凉的天气一样，在措不及防之时，已是漫山遍野的秋意。秋短且浓烈，已是赏红叶的最佳时节。香山的红叶出了名，不过就是人太多，工作日尚且如此，何况周末。和朋友合计了下，反正我俩以前也去过，这次就换个地儿。参考了网上赏红叶相关的攻略，决定自驾前往房山红井路——北京醉美的一条乡村公路！&lt;/p&gt;
+      &lt;!-- build time:Thu Apr 30 2020 16:42:29 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;北京的秋天，像突然转凉的天气一样，在措不及防之时，已是漫山遍野的秋意。秋短且浓烈，已是赏红叶的最佳时节。香山的红叶出了名，不过就是人太多，工作日尚且如此，何况周末。和朋友合计了下，反正我俩以前也去过，这次就换个地儿。参考了网上赏红叶相关的攻略，决定自驾前往房山红井路——北京醉美的一条乡村公路！&lt;/p&gt;
     
     </summary>
     
@@ -281,7 +281,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Thu Apr 30 2020 16:22:29 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;本小站新开通订阅功能，欢迎大家体验，祝大家 1024 节快乐！&lt;/p&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   /$$    /$$$$$$   /$$$$$$  /$$   /$$&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; /$$$$   /$$$_  $$ /$$__  $$| $$  | $$&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|_  $$  | $$$$\ $$|__/  \ $$| $$  | $$&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  | $$  | $$ $$ $$  /$$$$$$/| $$$$$$$$&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  | $$  | $$\ $$$$ /$$____/ |_____  $$&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  | $$  | $$ \ $$$| $$            | $$&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; /$$$$$$|  $$$$$$/| $$$$$$$$      | $$&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|______/ \______/ |________/      |__/&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      &lt;!-- build time:Thu Apr 30 2020 16:42:29 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;本小站新开通订阅功能，欢迎大家体验，祝大家 1024 节快乐！&lt;/p&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   /$$    /$$$$$$   /$$$$$$  /$$   /$$&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; /$$$$   /$$$_  $$ /$$__  $$| $$  | $$&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|_  $$  | $$$$\ $$|__/  \ $$| $$  | $$&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  | $$  | $$ $$ $$  /$$$$$$/| $$$$$$$$&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  | $$  | $$\ $$$$ /$$____/ |_____  $$&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  | $$  | $$ \ $$$| $$            | $$&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; /$$$$$$|  $$$$$$/| $$$$$$$$      | $$&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|______/ \______/ |________/      |__/&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -297,7 +297,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Thu Apr 30 2020 16:22:29 GMT+0800 (GMT+08:00) --&gt;&lt;div class=&quot;group-picture&quot;&gt;&lt;div class=&quot;group-picture-container&quot;&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;div class=&quot;group-picture-column&quot; style=&quot;width:100%&quot;&gt;&lt;img class=&quot;index_img_class&quot; src=&quot;https://cdn.jsdelivr.net/gh/leafjame/cdn/img/articles/13/1.jpg&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+      &lt;!-- build time:Thu Apr 30 2020 16:42:29 GMT+0800 (GMT+08:00) --&gt;&lt;div class=&quot;group-picture&quot;&gt;&lt;div class=&quot;group-picture-container&quot;&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;div class=&quot;group-picture-column&quot; style=&quot;width:100%&quot;&gt;&lt;img class=&quot;index_img_class&quot; src=&quot;https://cdn.jsdelivr.net/gh/leafjame/cdn/img/articles/13/1.jpg&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
     
     </summary>
     
@@ -321,7 +321,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Thu Apr 30 2020 16:22:29 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;网上看到一款挺不错的基于 HTML 5 实现的播放器插件，支持多平台音乐解析、精准 LRC 歌词、智能记忆、视频播放等多种功能。目前免费使用，只需注册即可 DIY。作者表明自己是个&lt;strong&gt;初！中！生！&lt;/strong&gt;，&lt;del&gt;在 2016 年用业余时间写的&lt;/del&gt;（网传是抄袭、暴力破解他人作品），目前每天的访问量 10W+，用的人还是挺多的，本站点也进行了集成，可在左下角体验效果。&lt;/p&gt;
+      &lt;!-- build time:Thu Apr 30 2020 16:42:29 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;网上看到一款挺不错的基于 HTML 5 实现的播放器插件，支持多平台音乐解析、精准 LRC 歌词、智能记忆、视频播放等多种功能。目前免费使用，只需注册即可 DIY。作者表明自己是个&lt;strong&gt;初！中！生！&lt;/strong&gt;，&lt;del&gt;在 2016 年用业余时间写的&lt;/del&gt;（网传是抄袭、暴力破解他人作品），目前每天的访问量 10W+，用的人还是挺多的，本站点也进行了集成，可在左下角体验效果。&lt;/p&gt;
     
     </summary>
     
@@ -343,7 +343,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Thu Apr 30 2020 16:22:29 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;数据库为了维护事务的几种性质，尤其是一致性和隔离性，一般使用加锁这种方式。同时数据库又是个高并发的应用，同一时间会有大量的并发访问，如果加锁过度，会极大的降低并发处理能力。所以对于加锁的处理，可以说就是数据库对于事务处理的精髓所在。&lt;/p&gt;
+      &lt;!-- build time:Thu Apr 30 2020 16:42:29 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;数据库为了维护事务的几种性质，尤其是一致性和隔离性，一般使用加锁这种方式。同时数据库又是个高并发的应用，同一时间会有大量的并发访问，如果加锁过度，会极大的降低并发处理能力。所以对于加锁的处理，可以说就是数据库对于事务处理的精髓所在。&lt;/p&gt;
     
     </summary>
     
@@ -369,7 +369,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Thu Apr 30 2020 16:22:29 GMT+0800 (GMT+08:00) --&gt;&lt;div class=&quot;group-picture&quot;&gt;&lt;div class=&quot;group-picture-container&quot;&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;div class=&quot;group-picture-column&quot; style=&quot;width:100%&quot;&gt;&lt;img class=&quot;index_img_class&quot; src=&quot;https://cdn.jsdelivr.net/gh/leafjame/cdn/img/articles/15/1.jpg&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+      &lt;!-- build time:Thu Apr 30 2020 16:42:29 GMT+0800 (GMT+08:00) --&gt;&lt;div class=&quot;group-picture&quot;&gt;&lt;div class=&quot;group-picture-container&quot;&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;div class=&quot;group-picture-column&quot; style=&quot;width:100%&quot;&gt;&lt;img class=&quot;index_img_class&quot; src=&quot;https://cdn.jsdelivr.net/gh/leafjame/cdn/img/articles/15/1.jpg&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
     
     </summary>
     
@@ -393,7 +393,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Thu Apr 30 2020 16:22:29 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;&lt;video controls preload=&quot;none&quot; width=&quot;100%&quot; poster=&quot;https://cdn.jsdelivr.net/gh/leafjame/cdn/img/articles/16/1.jpg&quot; src=&quot;https://cdn.jsdelivr.net/gh/leafjame/cdn/video/20191001.mp4&quot; style=&quot;max-height:100%;max-width:100%;display:block;margin-left:auto;margin-right:auto&quot; loop&gt;您的浏览器暂时无法播放此视频.&lt;/video&gt;&lt;/p&gt;
+      &lt;!-- build time:Thu Apr 30 2020 16:42:29 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;&lt;video controls preload=&quot;none&quot; width=&quot;100%&quot; poster=&quot;https://cdn.jsdelivr.net/gh/leafjame/cdn/img/articles/16/1.jpg&quot; src=&quot;https://cdn.jsdelivr.net/gh/leafjame/cdn/video/20191001.mp4&quot; style=&quot;max-height:100%;max-width:100%;display:block;margin-left:auto;margin-right:auto&quot; loop&gt;您的浏览器暂时无法播放此视频.&lt;/video&gt;&lt;/p&gt;
     
     </summary>
     
@@ -419,7 +419,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Thu Apr 30 2020 16:22:29 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;由于网站部署在 GitHub Pages，服务器在美国，在国内部分地区访问速度比较慢而且还不是很稳定。在尝试将加载的google字体库切换成烧饼提供的加速站点后，网站响应速度有一定提升。然后就是使用了 InstantClick 和 hexo 的两个插件 hexo-service-worker、 hexo-filter-optimize 来提速，期间也接触了下 PWA，下边将分别介绍。&lt;/p&gt;
+      &lt;!-- build time:Thu Apr 30 2020 16:42:29 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;由于网站部署在 GitHub Pages，服务器在美国，在国内部分地区访问速度比较慢而且还不是很稳定。在尝试将加载的google字体库切换成烧饼提供的加速站点后，网站响应速度有一定提升。然后就是使用了 InstantClick 和 hexo 的两个插件 hexo-service-worker、 hexo-filter-optimize 来提速，期间也接触了下 PWA，下边将分别介绍。&lt;/p&gt;
     
     </summary>
     
@@ -455,7 +455,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Thu Apr 30 2020 16:22:29 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;&lt;video controls preload=&quot;none&quot; width=&quot;100%&quot; poster=&quot;https://cdn.jsdelivr.net/gh/leafjame/cdn/img/articles/18/1.jpg&quot; src=&quot;https://www.liaofuzhan.com/video/kaiguodadian.mp4&quot; style=&quot;max-height:100%;max-width:100%;display:block;margin-left:auto;margin-right:auto&quot; loop&gt;您的浏览器暂时无法播放此视频.&lt;/video&gt;&lt;/p&gt;
+      &lt;!-- build time:Thu Apr 30 2020 16:42:29 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;&lt;video controls preload=&quot;none&quot; width=&quot;100%&quot; poster=&quot;https://cdn.jsdelivr.net/gh/leafjame/cdn/img/articles/18/1.jpg&quot; src=&quot;https://www.liaofuzhan.com/video/kaiguodadian.mp4&quot; style=&quot;max-height:100%;max-width:100%;display:block;margin-left:auto;margin-right:auto&quot; loop&gt;您的浏览器暂时无法播放此视频.&lt;/video&gt;&lt;/p&gt;
     
     </summary>
     
@@ -483,7 +483,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Thu Apr 30 2020 16:22:29 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;应邀，本站主题已整理开源，点击右上角 &lt;a href=&quot;https://github.com/leafjame/hexo-theme-next5-leaf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;fork me from github&lt;/a&gt; 链接前往，欢迎 &lt;strong&gt;star&lt;/strong&gt;、&lt;strong&gt;fork&lt;/strong&gt;。&lt;/p&gt;
+      &lt;!-- build time:Thu Apr 30 2020 16:42:29 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;应邀，本站主题已整理开源，点击右上角 &lt;a href=&quot;https://github.com/leafjame/hexo-theme-next5-leaf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;fork me from github&lt;/a&gt; 链接前往，欢迎 &lt;strong&gt;star&lt;/strong&gt;、&lt;strong&gt;fork&lt;/strong&gt;。&lt;/p&gt;
     
     </summary>
     
