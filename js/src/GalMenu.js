@@ -1,3 +1,141 @@
-// build time:Sat May 16 2020 16:37:24 GMT+0800 (GMT+08:00)
-(function(e){var t={defaults:{click_to_close:true,stay_open:false},init:function(n){var o=e("#audioSong")[0];var c=n,l=e(this);l.each(function(n){var l=e(this),i=e.extend({},t.defaults,c),a=e("."+i.menu);l.on("mousedown",function(t){if(t.which!==3&&e(t.target).parents(".GalMenu").length<1&&i.click_to_close){l.find(".GalMenu").stop(true,false).animate({opacity:0},{duration:100,queue:false,complete:function(){e(this).css("display","none").find(".active").removeClass("active").next().stop(true,true).slideUp("normal")}});e(".circle").removeClass("open");e("#overlay").hide();e(".GalMenu").delay(400).hide(0);o.pause();o.currentTime=0}});var r=["https://cdn.jsdelivr.net/gh/leafjame/cdn/music/iphone.mp3","https://cdn.jsdelivr.net/gh/leafjame/cdn/music/lock.mp3","https://cdn.jsdelivr.net/gh/leafjame/cdn/music/cf.mp3"];var s=0;l.on("contextmenu",function(n){n.preventDefault();n.stopPropagation();t.getCoords(n);e(".GalMenu_close_me").stop(true,false).animate({opacity:0},{duration:100,queue:false,complete:function(){e(this).css("display","none")}});if(s>=r.length){s=0}e("#audioSong").attr("src",r[s]);var c=150;var l=Coords.clientY-c,i=e("body")[0]===n.target?Coords.clickX-c:Coords.clientX-c;var u=document.documentElement.clientHeight;var d=document.documentElement.clientWidth;if(l<0)l=0;if(u-Coords.clientY<150)l=u-300;if(i<0)i=0;if(e("body")[0]===n.target){if(d-Coords.clickX<150)i=d-300}else{if(d-Coords.clientX<150)i=d-300}a.css({top:l+"px",left:i+"px",display:"block"}).stop(true,false).animate({opacity:1},{duration:100,queue:false});if(e("#gal").hasClass("open")){e(".circle").removeClass("open");e("#overlay").hide();e(".GalMenu").delay(400).hide(0);o.pause();o.currentTime=0}else{e(".circle").addClass("open");e("#overlay,.GalMenu").show();o.play();s++}})})},getCoords:function(e){var t=e?e:window.event;var n=0,o=0;if((t.clientX||t.clientY)&&document.body&&document.body.scrollLeft!=null){n=t.clientX+document.body.scrollLeft;o=t.clientY+document.body.scrollTop}if((t.clientX||t.clientY)&&document.compatMode=="CSS1Compat"&&document.documentElement&&document.documentElement.scrollLeft!=null){n=t.clientX+document.documentElement.scrollLeft;o=t.clientY+document.documentElement.scrollTop}if(t.pageX||t.pageY){n=t.pageX;o=t.pageY}return Coords={clickX:n,clickY:o,clientX:t.clientX,clientY:t.clientY,screenX:t.screenX,screenY:t.screenY}}};e.fn.GalMenu=function(n,o){if(t[n]){return t[n].apply(this,Array.prototype.slice.call(arguments,1))}else if(typeof n==="object"||!n){return t.init.apply(this,arguments)}else{e.error("Method "+n+" does not exist")}}})(jQuery);String.prototype.removeWS=function(){return this.toString().replace(/\s/g,"")};String.prototype.pF=function(){return parseFloat(this)};Number.prototype.pF=function(){return parseFloat(this)};
-//rebuild by neat 
+(function($) {
+    var GalMenu = {
+        defaults: {
+            click_to_close: true,
+            stay_open: false
+        },
+        init: function(options) {
+            var audio = $("#audioSong")[0];
+            var o = options,
+            $this = $(this);
+            $this.each(function(i) {
+                var $this = $(this),
+                settings = $.extend({},
+                GalMenu.defaults, o),
+                $menu = $('.' + settings.menu);
+                $this.on('mousedown',
+                function(e) {
+                    if (e.which !== 3 && $(e.target).parents('.GalMenu').length < 1 && settings.click_to_close) {
+                        $this.find('.GalMenu').stop(true, false).animate({
+                            opacity: 0
+                        },
+                        {
+                            duration: 100,
+                            queue: false,
+                            complete: function() {
+                                $(this).css('display', 'none').find('.active').removeClass('active').next().stop(true, true).slideUp('normal')
+                            }
+                        });
+                        $(".circle").removeClass("open");
+                        $("#overlay").hide();
+                        $(".GalMenu").delay(400).hide(0);
+                        audio.pause();
+                        audio.currentTime = 0;
+                    }
+                });
+
+                var songArr = ['https://cdn.jsdelivr.net/gh/leafjame/cdn/music/iphone.mp3', 'https://cdn.jsdelivr.net/gh/leafjame/cdn/music/lock.mp3', 'https://cdn.jsdelivr.net/gh/leafjame/cdn/music/cf.mp3'];
+                var _index = 0;
+                $this.on('contextmenu',
+                function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    GalMenu.getCoords(e);
+                    $('.GalMenu_close_me').stop(true, false).animate({
+                        opacity: 0
+                    },
+                    {
+                        duration: 100,
+                        queue: false,
+                        complete: function() {
+                            $(this).css('display', 'none')
+                        }
+                    });
+
+                    // var _index = parseInt(Math.random() * songArr.length);
+                    if(_index >= songArr.length){
+                      _index = 0;
+                    }
+                    $("#audioSong").attr("src", songArr[_index]);
+                    var add = 150;
+                    var top = Coords.clientY - add,
+                    left = ($('body')[0] === e.target) ? Coords.clickX - add: Coords.clientX - add;
+					          //防止菜单超出可见区域，不需要可注释掉
+                    var bodyHe= document.documentElement.clientHeight;
+                    var bodyWi = document.documentElement.clientWidth;
+                    if(top<0) top=0;
+                    if(bodyHe-Coords.clientY<150) top=bodyHe-300;
+                    if(left<0) left=0;
+                    if($('body')[0] === e.target){if(bodyWi-Coords.clickX<150) left=bodyWi-300} else {if(bodyWi-Coords.clientX<150) left=bodyWi-300};
+					          //防止菜单超出可见区域，不需要可注释掉
+                    $menu.css({
+                        top: top + 'px',
+                        left: left + 'px',
+                        display: 'block'
+                    }).stop(true, false).animate({
+                        opacity: 1
+                    },
+                    {
+                        duration: 100,
+                        queue: false
+                    });
+                    if ($("#gal").hasClass("open")) {
+                        $(".circle").removeClass("open");
+                        $("#overlay").hide();
+                        $(".GalMenu").delay(400).hide(0);
+                        audio.pause();
+                        audio.currentTime = 0
+                    } else {
+                        $(".circle").addClass("open");
+                        $("#overlay,.GalMenu").show();
+                        audio.play();
+                        _index++;
+                    }
+                })
+            })
+        },
+        getCoords: function(e) {
+            var evt = e ? e: window.event;
+            var clickX = 0,
+            clickY = 0;
+            if ((evt.clientX || evt.clientY) && document.body && document.body.scrollLeft != null) {
+                clickX = evt.clientX + document.body.scrollLeft;
+                clickY = evt.clientY + document.body.scrollTop
+            };
+            if ((evt.clientX || evt.clientY) && document.compatMode == 'CSS1Compat' && document.documentElement && document.documentElement.scrollLeft != null) {
+                clickX = evt.clientX + document.documentElement.scrollLeft;
+                clickY = evt.clientY + document.documentElement.scrollTop
+            };
+            if (evt.pageX || evt.pageY) {
+                clickX = evt.pageX;
+                clickY = evt.pageY
+            };
+            return Coords = {
+                clickX: clickX,
+                clickY: clickY,
+                clientX: evt.clientX,
+                clientY: evt.clientY,
+                screenX: evt.screenX,
+                screenY: evt.screenY
+            }
+        }
+    };
+    $.fn.GalMenu = function(method, options) {
+        if (GalMenu[method]) {
+            return GalMenu[method].apply(this, Array.prototype.slice.call(arguments, 1))
+        } else if (typeof method === 'object' || !method) {
+            return GalMenu.init.apply(this, arguments)
+        } else {
+            $.error('Method ' + method + ' does not exist')
+        }
+    }
+})(jQuery);
+String.prototype.removeWS = function() {
+    return this.toString().replace(/\s/g, '')
+};
+String.prototype.pF = function() {
+    return parseFloat(this)
+};
+Number.prototype.pF = function() {
+    return parseFloat(this)
+};
