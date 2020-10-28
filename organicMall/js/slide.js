@@ -79,20 +79,7 @@ $(function(){
 
 		ismove = true;
 
-		if(nowli<0)
-		{
-			nowli=len-1;
-			prevli = 0
-			$slides.eq(nowli).css({left:-760});
-			$slides.eq(nowli).animate({left:0},800,'easeOutExpo');
-			$slides.eq(prevli).animate({left:760},800,'easeOutExpo',function(){
-				ismove = false;
-			});
-			prevli=nowli;
-			return;
-		}
-
-		if(nowli>len-1)
+		if(nowli<0) { nowli="len-1;" prevli="0" $slides.eq(nowli).css({left:-760}); $slides.eq(nowli).animate({left:0},800,'easeoutexpo'); $slides.eq(prevli).animate({left:760},800,'easeoutexpo',function(){ ismove="false;" }); return; } if(nowli>len-1)
 		{
 			nowli = 0;
 			prevli = len-1;
@@ -106,25 +93,4 @@ $(function(){
 		}
 
 
-		if(prevli<nowli)
-		{
-			$slides.eq(nowli).css({left:760});			
-			$slides.eq(prevli).animate({left:-760},800,'easeOutExpo');
-			$slides.eq(nowli).animate({left:0},800,'easeOutExpo',function(){
-				ismove = false;
-			});
-			prevli=nowli;
-			
-		}
-		else
-		{			
-			$slides.eq(nowli).css({left:-760});			
-			$slides.eq(prevli).animate({left:760},800,'easeOutExpo');	
-			$slides.eq(nowli).animate({left:0},800,'easeOutExpo',function(){
-				ismove = false;
-			});
-			prevli=nowli;		
-		}
-
-	}
-})
+		if(prevli</0)></li>

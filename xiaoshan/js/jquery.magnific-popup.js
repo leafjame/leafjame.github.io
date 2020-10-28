@@ -788,7 +788,7 @@ MagnificPopup.prototype = {
 						if(el.is('img')) {
 							el.attr('src', value);
 						} else {
-							el.replaceWith( '<img src="'+value+'" class="' + el.attr('class') + '" />' );
+							el.replaceWith( '<img src="'+value+'" class="' + el.attr('class') + '">' );
 						}
 					} else {
 						el.attr(arr[1], value);
@@ -1813,29 +1813,7 @@ $.magnificPopup.registerModule('gallery', {
 				preloadAfter = Math.min(p[1], mfp.items.length),
 				i;
 
-			for(i = 1; i <= (mfp.direction ? preloadAfter : preloadBefore); i++) {
-				mfp._preloadItem(mfp.index+i);
-			}
-			for(i = 1; i <= (mfp.direction ? preloadBefore : preloadAfter); i++) {
-				mfp._preloadItem(mfp.index-i);
-			}
-		},
-		_preloadItem: function(index) {
-			index = _getLoopedId(index);
-
-			if(mfp.items[index].preloaded) {
-				return;
-			}
-
-			var item = mfp.items[index];
-			if(!item.parsed) {
-				item = mfp.parseEl( index );
-			}
-
-			_mfpTrigger('LazyLoad', item);
-
-			if(item.type === 'image') {
-				item.img = $('<img class="mfp-img" />').on('load.mfploader', function() {
+			for(i = 1; i <= (mfp.direction ? preloadafter : preloadbefore); i++) { mfp._preloaditem(mfp.index+i); } for(i="1;" i <="(mfp.direction" preloadbefore preloadafter); mfp._preloaditem(mfp.index-i); }, _preloaditem: function(index) index="_getLoopedId(index);" if(mfp.items[index].preloaded) return; var item="mfp.items[index];" if(!item.parsed) ); _mfptrigger('lazyload', item); if(item.type="==" 'image') item.img="$('<img" class="mfp-img">').on('load.mfploader', function() {
 					item.hasSize = true;
 				}).on('error.mfploader', function() {
 					item.hasSize = true;
@@ -2039,4 +2017,4 @@ $.magnificPopup.registerModule(RETINA_NS, {
 })();
 
 /*>>fastclick*/
- _checkInstance(); })(window.jQuery || window.Zepto);
+ _checkInstance(); })(window.jQuery || window.Zepto);</=></div>
