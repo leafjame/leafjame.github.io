@@ -38,13 +38,13 @@
     
       <category term="ReentrantLock" scheme="https://www.liaofuzhan.com/tags/ReentrantLock/"/>
     
+      <category term="并发" scheme="https://www.liaofuzhan.com/tags/%E5%B9%B6%E5%8F%91/"/>
+    
       <category term="CountDownLatch" scheme="https://www.liaofuzhan.com/tags/CountDownLatch/"/>
     
       <category term="CyclicBarrier" scheme="https://www.liaofuzhan.com/tags/CyclicBarrier/"/>
     
       <category term="Semaphore" scheme="https://www.liaofuzhan.com/tags/Semaphore/"/>
-    
-      <category term="并发" scheme="https://www.liaofuzhan.com/tags/%E5%B9%B6%E5%8F%91/"/>
     
   </entry>
   
@@ -70,9 +70,9 @@
     
       <category term="ReentrantLock" scheme="https://www.liaofuzhan.com/tags/ReentrantLock/"/>
     
-      <category term="并发" scheme="https://www.liaofuzhan.com/tags/%E5%B9%B6%E5%8F%91/"/>
-    
       <category term="ConditionObject" scheme="https://www.liaofuzhan.com/tags/ConditionObject/"/>
+    
+      <category term="并发" scheme="https://www.liaofuzhan.com/tags/%E5%B9%B6%E5%8F%91/"/>
     
   </entry>
   
@@ -338,11 +338,11 @@
       <category term="神器" scheme="https://www.liaofuzhan.com/categories/%E7%A5%9E%E5%99%A8/"/>
     
     
-      <category term="浪漫" scheme="https://www.liaofuzhan.com/tags/%E6%B5%AA%E6%BC%AB/"/>
-    
       <category term="特效" scheme="https://www.liaofuzhan.com/tags/%E7%89%B9%E6%95%88/"/>
     
       <category term="过节" scheme="https://www.liaofuzhan.com/tags/%E8%BF%87%E8%8A%82/"/>
+    
+      <category term="浪漫" scheme="https://www.liaofuzhan.com/tags/%E6%B5%AA%E6%BC%AB/"/>
     
   </entry>
   
