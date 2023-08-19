@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>网页镜子</title>
+<link rel="stylesheet" href="common.css">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/leafjame/cdn/img/icon/favicon-32x32-next.png" type="image/x-icon">
+<script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
+</head>	
+
+<body oncontextmenu="return false" ondragstart="return false">
+
+<div id="wrapper">
+	<div class="skinBg" style="
+		background-image:url('fox.jpg');
+		background-repeat:no-repeat;
+		background-size:100% 100%;
+		-moz-background-size:100% 100%;">
+	</div>
+	<header id="header">
+	
+		<div class="weather fl">
+			<span class="pollution">
+				<span><a class="tc" href="/" target="_blank">北宸</a></span>
+			</span>
+		</div>
+		
+		<nav class="headNavs fr tr">
+			<a href="#">宝箱</a>
+			<a href="#">换肤</a>
+			<a href="#">消息</a>
+			<a href="#">设为首页</a>
+			<a href="javascript:;" class="uname">| 更多</a>
+			<div class="topMenus dn">
+				<span class="arrowTop"></span>
+				<a href="#">个人中心</a>
+				<a href="#">帐号设置</a>
+				<a href="#">搜索设置</a>
+				<a href="#">高级搜索</a>
+				<a href="#">安全退出</a>
+			</div>
+		</nav>
+	</header>
+	<div class="content tc">
+		<br><br><br><br>
+		<a href="https://www.liaofuzhan.com">
+			<p class="logo">
+				<img width="270" height="120" src="google.jpg" alt="logo">
+			</p>
+		</a>
+		<br><br>
+		
+		<nav class="mainNavs">
+			<a href="/mirror/mirror.html#">新闻</a>
+			<a href="/mirror/mirror.html#">网页</a>
+			<a href="/mirror/mirror.html#">贴吧</a>
+			<a href="/mirror/mirror.html#">知道</a>
+			<a href="/mirror/mirror.html#">音乐</a>
+			<a href="/mirror/mirror.html#">图片</a>
+			<a href="/mirror/mirror.html#">视频</a>
+			<a href="/mirror/mirror.html#">地图</a>
+			<a href="/mirror/mirror.html#">百科</a>
+			<a href="/mirror/mirror.html#">文库</a>
+			<a href="/mirror/mirror.html#">更多 &gt;&gt;</a>
+		</nav>
+		
+		<div class="searchBox" style="opacity:0.8">
+			<form action="/mirror/mirror.html">
+				<input type="text" value="https://" class="searchIpt f14" name="url" maxlength="100" autocomplete="off">
+				<input type="submit" class="btn cp" value="Duang一下">
+			</form>
+		</div>
+		<br><br><br><br><br><br><br><br><br><br>
+		<footer id="footer" class="tc">Copyright © 2020. All Rights Reserved. <a class="tc" href="/" target="_blank">Leaface</a></footer>
+</div>
+
+<script>
+$('.uname,.topMenus').hover(function(){
+	$('.topMenus').stop(true,true).fadeIn(200);
+},function(){
+	$('.topMenus').stop(true,true).delay(500).fadeOut(200);
+});
+</script>
+
+</div>
+</body></html>

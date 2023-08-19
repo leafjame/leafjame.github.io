@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+Allow: /archives/
+Allow: /categories/
+Allow: /tags/
+Allow: /xiaohutong/
+Allow: /about/
+Allow: /life/
+Allow: /love/
+Allow: /top/
+Allow: /photos/
+Allow: /links/
+Allow: /books/
+Allow: /movies/
+
+Disallow: /vendors/
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /vendors/
+Disallow: /fancybox/
+
+Sitemap: https://www.liaofuzhan.com/sitemap.xml
+Sitemap: https://www.liaofuzhan.com/baidusitemap.xml

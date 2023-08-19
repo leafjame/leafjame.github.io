@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Leaface</title>
+  
+  <subtitle>Stay Hungry Stay Foolish</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://www.liaofuzhan.com/"/>
+  <updated>2023-08-19T05:26:00.443Z</updated>
+  <id>https://www.liaofuzhan.com/</id>
+  
+  <author>
+    <name>北宸</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一行一行源码分析清楚 AbstractQueuedSynchronizer (三)</title>
+    <link href="https://www.liaofuzhan.com/posts/1892723867.html"/>
+    <id>https://www.liaofuzhan.com/posts/1892723867.html</id>
+    <published>2022-03-05T04:16:15.000Z</published>
+    <updated>2023-08-19T05:26:00.443Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这篇文章是 AQS 系列的最后一篇，第一篇，我们通过 ReentrantLock 公平锁分析了 AQS 的核心，第二篇的重点是把 Condition 说明白，同时也说清楚了对于线程中断的使用。这篇，我们的关注点是 AQS 最后的部分，&lt;strong&gt;AQS 共享模式&lt;/strong&gt;的使用。有前两篇文章的铺垫，剩下的源码分析将会简单很多。本文先用 CountDownLatch 将共享模式说清楚，然后顺着把其他 AQS 相关的类 CyclicBarrier、Semaphore 的源码一起过一下。相对来说，如果读者有前面两篇文章的基础，这篇文章是简单很多，不过对于初学者来说，1 小时估计也是免不了的。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Java" scheme="https://www.liaofuzhan.com/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="https://www.liaofuzhan.com/tags/Java/"/>
+    
+      <category term="AbstractQueuedSynchronizer" scheme="https://www.liaofuzhan.com/tags/AbstractQueuedSynchronizer/"/>
+    
+      <category term="ReentrantLock" scheme="https://www.liaofuzhan.com/tags/ReentrantLock/"/>
+    
+      <category term="CountDownLatch" scheme="https://www.liaofuzhan.com/tags/CountDownLatch/"/>
+    
+      <category term="CyclicBarrier" scheme="https://www.liaofuzhan.com/tags/CyclicBarrier/"/>
+    
+      <category term="Semaphore" scheme="https://www.liaofuzhan.com/tags/Semaphore/"/>
+    
+      <category term="并发" scheme="https://www.liaofuzhan.com/tags/%E5%B9%B6%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一行一行源码分析清楚 AbstractQueuedSynchronizer (二)</title>
+    <link href="https://www.liaofuzhan.com/posts/237210800.html"/>
+    <id>https://www.liaofuzhan.com/posts/237210800.html</id>
+    <published>2022-02-26T04:02:11.000Z</published>
+    <updated>2023-08-19T05:26:00.443Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;文章比较长，信息量比较大，建议在 pc 上阅读。文章标题是为了呼应前文，其实可以单独成文的，主要是希望读者看文章能系统看。&lt;/p&gt;&lt;p&gt;本文关注以下几点内容：&lt;/p&gt;&lt;p&gt;1、 深入理解 ReentrantLock 公平锁和非公平锁的区别&lt;br&gt;2、 深入分析 AbstractQueuedSynchronizer 中的 ConditionObject&lt;br&gt;3、 深入理解 Java 线程中断和 InterruptedException 异常&lt;/p&gt;&lt;p&gt;基本上本文把以上几点都说清楚了，我假设读者看过&lt;a href=&quot;https://www.liaofuzhan.com/posts/331601127.html&quot;&gt;上一篇文章中对 AbstractQueuedSynchronizer 的介绍 &lt;/a&gt;，当然如果你已经熟悉 AQS 中的独占锁了，那也可以直接看这篇。各小节之间基本上没什么关系，大家可以只关注自己感兴趣的部分。其实这篇文章的信息量很大，初学者估计&lt;strong&gt;至少要 1 小时&lt;/strong&gt;才能看完，希望本文对得起大家的时间。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Java" scheme="https://www.liaofuzhan.com/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="https://www.liaofuzhan.com/tags/Java/"/>
+    
+      <category term="AbstractQueuedSynchronizer" scheme="https://www.liaofuzhan.com/tags/AbstractQueuedSynchronizer/"/>
+    
+      <category term="ReentrantLock" scheme="https://www.liaofuzhan.com/tags/ReentrantLock/"/>
+    
+      <category term="并发" scheme="https://www.liaofuzhan.com/tags/%E5%B9%B6%E5%8F%91/"/>
+    
+      <category term="ConditionObject" scheme="https://www.liaofuzhan.com/tags/ConditionObject/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一行一行源码分析清楚 AbstractQueuedSynchronizer</title>
+    <link href="https://www.liaofuzhan.com/posts/331601127.html"/>
+    <id>https://www.liaofuzhan.com/posts/331601127.html</id>
+    <published>2022-02-19T06:17:44.000Z</published>
+    <updated>2023-08-19T05:26:00.443Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在分析 Java 并发包 java.util.concurrent 源码的时候，少不了需要了解 AbstractQueuedSynchronizer（以下简写AQS）这个抽象类，因为它是 Java 并发包的基础工具类，是实现 ReentrantLock、CountDownLatch、Semaphore、FutureTask 等类的基础。Google 一下 AbstractQueuedSynchronizer，我们可以找到很多关于 AQS 的介绍，但是很多都没有介绍清楚，因为大部分文章没有把其中的一些关键的细节说清楚。本文将从 ReentrantLock 的公平锁源码出发，分析下 AbstractQueuedSynchronizer 这个类是怎么工作的，希望能给大家提供一些简单的帮助。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Java" scheme="https://www.liaofuzhan.com/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="https://www.liaofuzhan.com/tags/Java/"/>
+    
+      <category term="AbstractQueuedSynchronizer" scheme="https://www.liaofuzhan.com/tags/AbstractQueuedSynchronizer/"/>
+    
+      <category term="ReentrantLock" scheme="https://www.liaofuzhan.com/tags/ReentrantLock/"/>
+    
+      <category term="并发" scheme="https://www.liaofuzhan.com/tags/%E5%B9%B6%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot 使用 @Transactional 无效</title>
+    <link href="https://www.liaofuzhan.com/posts/1059904857.html"/>
+    <id>https://www.liaofuzhan.com/posts/1059904857.html</id>
+    <published>2021-09-25T09:35:01.000Z</published>
+    <updated>2023-08-19T05:26:00.453Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在 Spring Boot 引入的依赖 spring-boot-starter、spring-boot-starter-web 中都已经包含了对于 spring-boot-starter-jdbc 或 spring-boot-starter-data-jpa 的依赖，框架会自动默认分别注入 DataSourceTransactionManager 或 JpaTransactionManager。我们不需要任何额外配置就可以用 @Transactional 注解进行事务的使用。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Tech" scheme="https://www.liaofuzhan.com/categories/Tech/"/>
+    
+    
+      <category term="事务" scheme="https://www.liaofuzhan.com/tags/%E4%BA%8B%E5%8A%A1/"/>
+    
+      <category term="Spring Boot" scheme="https://www.liaofuzhan.com/tags/Spring-Boot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用 Certbot 申请免费的 SSL 证书</title>
+    <link href="https://www.liaofuzhan.com/posts/712036057.html"/>
+    <id>https://www.liaofuzhan.com/posts/712036057.html</id>
+    <published>2021-09-19T08:45:01.000Z</published>
+    <updated>2023-08-19T05:26:00.451Z</updated>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;group-picture&quot;&gt;&lt;div class=&quot;group-picture-container&quot;&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;div class=&quot;group-picture-column&quot; style=&quot;width:100%&quot;&gt;&lt;img class=&quot;index_img_class&quot; src=&quot;https://cdn.jsdelivr.net/gh/leafjame/cdn/img/articles/41/1.jpg&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://www.liaofuzhan.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="SSL" scheme="https://www.liaofuzhan.com/tags/SSL/"/>
+    
+      <category term="Certbot" scheme="https://www.liaofuzhan.com/tags/Certbot/"/>
+    
+      <category term="Let&#39;s Encrypt" scheme="https://www.liaofuzhan.com/tags/Let-s-Encrypt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring Kafka 批量消费</title>
+    <link href="https://www.liaofuzhan.com/posts/2865062686.html"/>
+    <id>https://www.liaofuzhan.com/posts/2865062686.html</id>
+    <published>2021-09-12T07:50:12.000Z</published>
+    <updated>2023-08-19T05:26:00.453Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Kafka 作为一个分布式发布订阅的消息系统，是目前最流行的消息队列之一，批量消费在现实业务场景中可以提高 kafka 消费吞吐量。Spring 框架可以使用 &lt;code&gt;@KafkaListener&lt;/code&gt; 注解来实现消费端批量消费的功能。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Tech" scheme="https://www.liaofuzhan.com/categories/Tech/"/>
+    
+    
+      <category term="Kafka" scheme="https://www.liaofuzhan.com/tags/Kafka/"/>
+    
+      <category term="Spring Boot" scheme="https://www.liaofuzhan.com/tags/Spring-Boot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring Retry 重试机制</title>
+    <link href="https://www.liaofuzhan.com/posts/2355788036.html"/>
+    <id>https://www.liaofuzhan.com/posts/2355788036.html</id>
+    <published>2021-09-11T09:11:33.000Z</published>
+    <updated>2023-08-19T05:26:00.453Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在调用外部服务进行查询时，常常因为网络抖动、服务方限流等不可预知的一些因素造成查询失败。为了克服这些问题，引入了重试机制 Spring Retry.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Tech" scheme="https://www.liaofuzhan.com/categories/Tech/"/>
+    
+    
+      <category term="Spring Boot" scheme="https://www.liaofuzhan.com/tags/Spring-Boot/"/>
+    
+      <category term="Spring Retry" scheme="https://www.liaofuzhan.com/tags/Spring-Retry/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mac 显示隐藏系统文件</title>
+    <link href="https://www.liaofuzhan.com/posts/3025236955.html"/>
+    <id>https://www.liaofuzhan.com/posts/3025236955.html</id>
+    <published>2021-09-05T07:15:20.000Z</published>
+    <updated>2023-08-19T05:26:00.453Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/leafjame/cdn/img/articles/40/apple.jpg&quot; alt=&quot;mac&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Tech" scheme="https://www.liaofuzhan.com/categories/Tech/"/>
+    
+    
+      <category term="Mac" scheme="https://www.liaofuzhan.com/tags/Mac/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PJAX加速站点访问</title>
+    <link href="https://www.liaofuzhan.com/posts/2913572160.html"/>
+    <id>https://www.liaofuzhan.com/posts/2913572160.html</id>
+    <published>2020-05-01T02:55:51.000Z</published>
+    <updated>2023-08-19T05:26:00.453Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;说起 PJAX，已是由来已久，在很多网站上经常会遇到。它通过 PushState + Ajax 技术，实现 HTML 页面局部刷新等功能，提供了一种极速的浏览体验。避免每次载入过多的重复资源，耗费额外加载时间，提升了网站的整体访问速度。最直观的体验就是音乐能全局播放了！&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Tech" scheme="https://www.liaofuzhan.com/categories/Tech/"/>
+    
+    
+      <category term="加速" scheme="https://www.liaofuzhan.com/tags/%E5%8A%A0%E9%80%9F/"/>
+    
+      <category term="Pjax" scheme="https://www.liaofuzhan.com/tags/Pjax/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Cloudflare几款实用的APP</title>
+    <link href="https://www.liaofuzhan.com/posts/1344151861.html"/>
+    <id>https://www.liaofuzhan.com/posts/1344151861.html</id>
+    <published>2020-02-22T10:26:33.000Z</published>
+    <updated>2023-08-19T05:26:00.453Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本站使用 Cloudflare 提供的 DNS 和 CDN 服务，Cloudflare 是美帝跨国企业，实力强悍，针对个人网站推出了一定的 &lt;a href=&quot;https://www.cloudflare.com/zh-cn/plans/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;免费计划&lt;/a&gt;，注册完账号，添加受保护站点后即可使用，还提供了十分友好的统计和分析界面。文档很详细，使用起来基本没啥问题，接下来主要介绍 Cloudflare 几款实用的应用。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Tech" scheme="https://www.liaofuzhan.com/categories/Tech/"/>
+    
+    
+      <category term="Cloudflare" scheme="https://www.liaofuzhan.com/tags/Cloudflare/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>被遗忘的SQL</title>
+    <link href="https://www.liaofuzhan.com/posts/3973006348.html"/>
+    <id>https://www.liaofuzhan.com/posts/3973006348.html</id>
+    <published>2020-01-19T12:20:20.000Z</published>
+    <updated>2023-08-19T05:26:00.445Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;公司平台有个系统公告模块，展示的是管理员发布的通知和公告，数据库有公告和公告阅读记录这两张表，后者存有公告 ID 和用户 ID。现在前端需要两个接口：1、当前登录用户未读公告；2、当前登录用户下所有公告，并返回已读、未读标识。需求很简单，在此记录一下。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="数据库" scheme="https://www.liaofuzhan.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="数据库" scheme="https://www.liaofuzhan.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+      <category term="SQL" scheme="https://www.liaofuzhan.com/tags/SQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Happy New Year</title>
+    <link href="https://www.liaofuzhan.com/posts/712036056.html"/>
+    <id>https://www.liaofuzhan.com/posts/712036056.html</id>
+    <published>2020-01-01T12:20:20.000Z</published>
+    <updated>2023-08-19T05:26:00.451Z</updated>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;group-picture&quot;&gt;&lt;div class=&quot;group-picture-container&quot;&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;div class=&quot;group-picture-column&quot; style=&quot;width:100%&quot;&gt;&lt;img class=&quot;index_img_class&quot; src=&quot;https://cdn.jsdelivr.net/gh/leafjame/cdn/img/articles/4/1.jpg&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://www.liaofuzhan.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="2020" scheme="https://www.liaofuzhan.com/tags/2020/"/>
+    
+      <category term="Birthday" scheme="https://www.liaofuzhan.com/tags/Birthday/"/>
+    
+      <category term="总结" scheme="https://www.liaofuzhan.com/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于Lombok使用的一些问题</title>
+    <link href="https://www.liaofuzhan.com/posts/4067495121.html"/>
+    <id>https://www.liaofuzhan.com/posts/4067495121.html</id>
+    <published>2019-12-28T06:19:25.000Z</published>
+    <updated>2023-08-19T05:26:00.454Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Lombok 是一款非常实用的工具，通过注解能消除冗长的 Java 代码，工程中需要导入 lombok.jar，相应 IDE 的安装方式可参考 &lt;a href=&quot;https://projectlombok.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;官网&lt;/a&gt;。项目中使用到的注解主要是 @Data 和 @Builder，前一个注解用在类上，相当于同时使用了 @ToString、@EqualsAndHashCode、@Getter、@Setter 和 @RequiredArgsConstrutor；后一个主要用在类、构造器、方法上，能非常方便的实现建造者模式、链式编程，相关文档可参考 &lt;a href=&quot;https://projectlombok.org/features/all&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这里&lt;/a&gt;。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Tech" scheme="https://www.liaofuzhan.com/categories/Tech/"/>
+    
+    
+      <category term="Java" scheme="https://www.liaofuzhan.com/tags/Java/"/>
+    
+      <category term="Lombok" scheme="https://www.liaofuzhan.com/tags/Lombok/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>分享几款不错的浪漫素材</title>
+    <link href="https://www.liaofuzhan.com/posts/3564551888.html"/>
+    <id>https://www.liaofuzhan.com/posts/3564551888.html</id>
+    <published>2019-12-22T04:22:22.000Z</published>
+    <updated>2023-08-19T05:26:00.452Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;双旦将至，快找个暖冬又暖心的 TA 一起跨年吧！如果你还是一枚单身汪，那么再过几天的时间，又到了别人狂欢你孤单的圣诞之夜！再再再过几天时间，又双叒叕到了别人狂欢你孤单的跨年之夜！落单的人往往最怕过节，更何况双旦佳节的连环暴击，别人疯狂撒着狗粮，而你只能接受着来自情侣们的亿万点伤害，SO，与其不甘寂寞，何不为爱情放纵一次？撩个对象一起过双旦吧，2019 年最后一个脱单的机会，为你呈现 ！&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="神器" scheme="https://www.liaofuzhan.com/categories/%E7%A5%9E%E5%99%A8/"/>
+    
+    
+      <category term="特效" scheme="https://www.liaofuzhan.com/tags/%E7%89%B9%E6%95%88/"/>
+    
+      <category term="过节" scheme="https://www.liaofuzhan.com/tags/%E8%BF%87%E8%8A%82/"/>
+    
+      <category term="浪漫" scheme="https://www.liaofuzhan.com/tags/%E6%B5%AA%E6%BC%AB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>区块链项目环境搭建</title>
+    <link href="https://www.liaofuzhan.com/posts/2435254904.html"/>
+    <id>https://www.liaofuzhan.com/posts/2435254904.html</id>
+    <published>2019-12-13T09:36:06.000Z</published>
+    <updated>2023-08-19T05:26:00.444Z</updated>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;group-picture&quot;&gt;&lt;div class=&quot;group-picture-container&quot;&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;div class=&quot;group-picture-column&quot; style=&quot;width:100%&quot;&gt;&lt;img class=&quot;index_img_class&quot; src=&quot;https://cdn.jsdelivr.net/gh/leafjame/cdn/img/articles/6/1.jpg&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="区块链" scheme="https://www.liaofuzhan.com/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+    
+      <category term="区块链" scheme="https://www.liaofuzhan.com/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+      <category term="Fabric" scheme="https://www.liaofuzhan.com/tags/Fabric/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>个人域名企业邮箱</title>
+    <link href="https://www.liaofuzhan.com/posts/3598618716.html"/>
+    <id>https://www.liaofuzhan.com/posts/3598618716.html</id>
+    <published>2019-12-06T11:33:01.000Z</published>
+    <updated>2023-08-19T05:26:00.453Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;自本站开启了邮件订阅后，基于 Mailchimp 实现的代发功能很容易被其它邮件服务器标为垃圾邮件，一定程度上影响了订阅邮件的正常投递，主要是没有验证独立域名、设置 Mailchimp 提供的 DKIM / SPF 的 DNS 记录的缘故。这需要你拥有自己独立域名的邮箱，比如我近期申请的 ZOHO 企邮，后缀就是自己的域名。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Tech" scheme="https://www.liaofuzhan.com/categories/Tech/"/>
+    
+    
+      <category term="Mailchimp" scheme="https://www.liaofuzhan.com/tags/Mailchimp/"/>
+    
+      <category term="订阅" scheme="https://www.liaofuzhan.com/tags/%E8%AE%A2%E9%98%85/"/>
+    
+      <category term="企业邮箱" scheme="https://www.liaofuzhan.com/tags/%E4%BC%81%E4%B8%9A%E9%82%AE%E7%AE%B1/"/>
+    
+      <category term="ZOHO" scheme="https://www.liaofuzhan.com/tags/ZOHO/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>年冬初雪</title>
+    <link href="https://www.liaofuzhan.com/posts/3058510804.html"/>
+    <id>https://www.liaofuzhan.com/posts/3058510804.html</id>
+    <published>2019-11-30T12:49:28.000Z</published>
+    <updated>2023-08-19T05:26:00.451Z</updated>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;group-picture&quot;&gt;&lt;div class=&quot;group-picture-container&quot;&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;div class=&quot;group-picture-column&quot; style=&quot;width:100%&quot;&gt;&lt;img class=&quot;index_img_class&quot; src=&quot;https://cdn.jsdelivr.net/gh/leafjame/cdn/img/articles/8/1.jpg&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://www.liaofuzhan.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="https://www.liaofuzhan.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="北京" scheme="https://www.liaofuzhan.com/tags/%E5%8C%97%E4%BA%AC/"/>
+    
+      <category term="雪" scheme="https://www.liaofuzhan.com/tags/%E9%9B%AA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于Mailchimp实现邮件订阅功能</title>
+    <link href="https://www.liaofuzhan.com/posts/4068965437.html"/>
+    <id>https://www.liaofuzhan.com/posts/4068965437.html</id>
+    <published>2019-11-09T09:39:37.000Z</published>
+    <updated>2023-08-19T05:26:00.454Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前段时间，给自己的小站添加的订阅功能，主要是通过 Mailchimp 提供的 Signup forms 和 Landing page 做的。MailChimp 是一款提供邮件营销服务的老牌产品了，很多大企业都在用，普通用户每月可享受 10000 封免费邮件发送服务，可增加用户总数为 2000 个，具体的免费额度可在个人中心 –&amp;gt; Account 下进行查看。这里整理了部分有关于 Mailchimp 邮件订阅这方面的个人 Demo，供大家参考，&lt;a href=&quot;https://mailchi.mp/e92415d27722/leaf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;点此&lt;/a&gt; 可体验本站订阅功能。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Tech" scheme="https://www.liaofuzhan.com/categories/Tech/"/>
+    
+    
+      <category term="Mailchimp" scheme="https://www.liaofuzhan.com/tags/Mailchimp/"/>
+    
+      <category term="RSS" scheme="https://www.liaofuzhan.com/tags/RSS/"/>
+    
+      <category term="邮件订阅" scheme="https://www.liaofuzhan.com/tags/%E9%82%AE%E4%BB%B6%E8%AE%A2%E9%98%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一年一度万圣节</title>
+    <link href="https://www.liaofuzhan.com/posts/299207420.html"/>
+    <id>https://www.liaofuzhan.com/posts/299207420.html</id>
+    <published>2019-10-31T09:50:58.000Z</published>
+    <updated>2023-08-19T05:26:00.451Z</updated>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;group-picture&quot;&gt;&lt;div class=&quot;group-picture-container&quot;&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;div class=&quot;group-picture-column&quot; style=&quot;width:100%&quot;&gt;&lt;img class=&quot;index_img_class&quot; src=&quot;https://cdn.jsdelivr.net/gh/leafjame/cdn/img/articles/10/1.gif&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://www.liaofuzhan.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="https://www.liaofuzhan.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="万圣节" scheme="https://www.liaofuzhan.com/tags/%E4%B8%87%E5%9C%A3%E8%8A%82/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>京郊赏红叶之行</title>
+    <link href="https://www.liaofuzhan.com/posts/1259393631.html"/>
+    <id>https://www.liaofuzhan.com/posts/1259393631.html</id>
+    <published>2019-10-27T10:25:28.000Z</published>
+    <updated>2023-08-19T05:26:00.451Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;北京的秋天，像突然转凉的天气一样，在措不及防之时，已是漫山遍野的秋意。秋短且浓烈，已是赏红叶的最佳时节。香山的红叶出了名，不过就是人太多，工作日尚且如此，何况周末。和朋友合计了下，反正我俩以前也去过，这次就换个地儿。参考了网上赏红叶相关的攻略，决定自驾前往房山红井路——北京醉美的一条乡村公路！&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://www.liaofuzhan.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="https://www.liaofuzhan.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="京郊" scheme="https://www.liaofuzhan.com/tags/%E4%BA%AC%E9%83%8A/"/>
+    
+      <category term="自驾" scheme="https://www.liaofuzhan.com/tags/%E8%87%AA%E9%A9%BE/"/>
+    
+      <category term="红叶" scheme="https://www.liaofuzhan.com/tags/%E7%BA%A2%E5%8F%B6/"/>
+    
+  </entry>
+  
+</feed>

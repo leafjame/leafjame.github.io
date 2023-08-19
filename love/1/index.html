@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script language="JavaScript" type="text/Jscript" src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
+  <title>有情之人，天天是节。一句寒暖，一线相喧；一句叮咛，一笺相传；一份相思，一心相盼；</title>
+  <style>
+	 h3{
+		 text-align:center;
+		// color:#008B8B;
+		 font-size:23px;
+		 font-family:KaiTi_GB2312;
+		 font-style:italic;
+		 font-weight:bolder;
+		 letter-spacing:18px;//字体间距
+	 }
+	 h4{
+		 text-align:right;
+		// color:#00868B;
+		 font-size:21px;
+		 font-family:KaiTi_GB2312;
+		 font-style:italic;
+		 font-weight:bold;
+		 letter-spacing:14px;//字体间距
+	 }
+	 h5{
+		 text-align:right;
+		 color:#00868B;
+		 font-size:22px;
+		 font-family:KaiTi_GB2312;
+	//	 font-style:italic;
+	     font-weight:bold;
+		 letter-spacing:8px;//字体间距
+	//	 line-height:33px;//行间距
+	 }
+	 span{
+		 color:#00868B;
+		 font-size:16px;
+		 font-family:KaiTi_GB2312;
+		// font-style:italic;
+		// font-weight:bold;
+		 letter-spacing:5px;//字体间距
+	 }
+	 input {
+		 background:pink;
+		 color:	#FF0080;
+		 font-size:15px;
+		 font-family:KaiTi_GB2312;
+	}
+
+	.rose_font{
+		float:right;
+		margin-right:160px;
+		margin-top:30px;
+	}
+	 /*@media screen and (min-width: 768px) {
+		 .rose_font{
+			 margin-right:40px;
+			 margin-top:40px;
+		 }
+	 }*/
+	 
+  </style>
+
+	<link async rel="stylesheet" href="https://cdn.jsdelivr.net/gh/leafjame/cdn/js/sharejs/css/share.min.css">
+	<script async src="https://cdn.jsdelivr.net/gh/leafjame/cdn/js/sharejs/js/social-share.min.js"></script>
+
+ </head>
+    <body style="background-color:pink;">
+	
+		<div style="margin-top: 10px">
+			<audio id="audio_id" src="https://www.liaofuzhan.com/music/无尽光芒.mp3" preload="auto" controls="controls" height="100" width="100" autoplay="autoplay" loop="true">
+				  <!--<source src="https://www.liaofuzhan.com/music/无尽光芒.mp3" />
+				  <source src="https://www.liaofuzhan.com/music/无尽光芒.mp3" />
+				  <embed h	eight="100" width="100" src="My Sunshine.mp3" />-->
+			</audio>
+			<a href="javascript:void(0)" title="上一曲" style="text-decoration:none;">
+				<input type="button" onclick="nextOne()" value="上一曲" />
+			</a>&nbsp;
+			<a href="javascript:void(0)" title="下一曲" style="text-decoration:none;">
+				<input type="button" onclick="nextOne()" value="下一曲" />
+			</a>
+		</div>
+		<div style="float:left;margin-left:20px;">
+			<!-- 显示曲目 -->
+			<span id="song_title" style="color:#00E3E3"></span>
+		</div>
+		<div>
+			<MARQUEE onmouseover=this.stop() onmouseout=this.start()  scrollAmount=10 direction=left >
+				<a href="javascript:void(0)" style="text-decoration:none;" title="希望祝福来的不算晚哦~~~" onclick="alert('早睡早起身体好，修身养性学问高 ~O(∩_∩)O~');">
+					<span id="top_span_id">天气好好啊，出去走走吧，新的一天开始啦~\(≧▽≦)/~！</span>
+				</a>
+			</MARQUEE>
+		</div>
+		<div style="float:left;margin-left:10px;margin-top:10px;">
+				<marquee width=360 height=60 scrollAmount=1 direction=up onmouseover=this.stop() onmouseout=this.start()>
+					<h5>日高闲步下堂阶</h5>
+					<h5>细草春莎没绣鞋</h5>
+					<h5>折得玫瑰花一朵</h5>
+					<h5>凭君簪向凤凰钗</h5>
+				</marquee>
+		</div>
+		<div id="div_id" class="rose_font">
+			<h3>祝福随风绕千里</h3>
+			<h3>李妹娇美西施颜</h3>
+			<!-- 
+				<h3>X春妙龄娉婷立</h3>
+				<h3>X情沁脾润心间</h3>
+			-->
+			<h3>姗俏高雅佳人恋</h3> <!-- 珊花叶上鸳鸯鸟, 珊瑚玲珑巧缀装, 珊瑚刻盘青玉尊, 珊瑚枕滑葛衣轻, 珊珊行佩水苍同, 珊花烂漫游鱼痴,姗姿高雅佳人恋,珊步信来丽人笑 -->			
+			<h3>珊姿玲珑巧缀装</h3>
+			
+			<h3>开花落花尽她意</h3>
+			<h3>心遥长向梦中归</h3> <!-- 心魂原是水花香,心在林泉身在城, 心遥长向梦中归, 心期春色到梅梢 -->
+			<h3>快享爱情幸福曲</h3>
+			<h3>乐送蟠桃愿美满</h3>
+			<h3>每时每刻欢乐伴</h3>
+			<h3>一年四季富贵安</h3>
+			<h3>天长地久幸福远</h3>
+			<h4 style="margin-top: 50px;">
+				<a id="id_a" href="https://www.liaofuzhan.com" target="_blank" style="text-decoration:none;" title="点我，前往北宸的小站逛逛吧！" onclick="alert('欢迎光临，北宸祝妳每天都开心快乐！~(@^_^@)~ ');">
+					—北宸
+				</a>
+			</h4>
+			<div></div>
+							
+		</div>
+
+		<!-- 百度分享 -->
+		<!--<script>
+			window._bd_share_config = {
+				"common": {
+					"bdText": "有情之人，天天是节。一句寒暖，一线相喧；一句叮咛，一笺相传；一份相思，一心相盼！",
+					"bdMini": "1",
+					"bdMiniList": false,
+					"bdPic": ""
+				},
+				"image": {
+					"viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+					"viewText": "分享到：",
+					"viewSize": "16"
+				},
+				"slide": {
+					"bdImg": "0", // 5
+					"bdPos": "right",
+					"bdTop": "100"
+				}
+			};
+			with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+		</script>-->
+
+		<script>
+			function changeColor(){
+				var color="#f00|#0f0|#00f|#880|#808|green|blue|#DC143C|#00FFFF|#FF8C00|#FF1493|#FF00FF|#FFB6C1|#00FF7F|#FAF0E6|#FAEBD7|#008B8B|#9400D3|#E0FFFF|#7B68EE|#DA70D6|#87CEEB|#008080|#FF6347|#FFFF00|#9ACD32|#FF6347|#0000CD|#ADFF2F|#FFEBCD|#6495ED|#BA55D3|#7FFF00|#32CD32|#00FF00|#C0C0C0|#D02090|#2F4F4F|#DAA520|#E6E6FA|#F5DEB3|#D8BFD8|#F0F8FF|#7FFFD4|#5F9EA0";
+				color=color.split("|");
+				document.getElementById("id_a").style.color=color[parseInt(Math.random() * color.length)];
+				document.getElementById("bottom_surprise_id").style.color=color[parseInt(Math.random() * color.length)];
+				document.getElementById("top_span_id").style.color=color[parseInt(Math.random() * color.length)];
+				for(var i=0;i<document.getElementsByTagName("h3").length;i++){
+					document.getElementsByTagName("h3")[i].style.color=color[parseInt(Math.random() * color.length)];
+				};
+				
+				$("#song_title").fadeOut("slow");
+				$("#song_title").fadeIn("slow");
+				//$("#song_title").slideDown("slow");
+			}	
+				setInterval("changeColor()",300);
+				
+		</script>
+		<script>
+			
+			//页面加载
+			$(document).ready(function(){
+				var Sys = {};
+				var songIndex = 0;
+				 //固定歌曲
+				 var StaticSong = new Array( 'https://www.liaofuzhan.com/music/无尽光芒.mp3', 'https://www.liaofuzhan.com/music/心中的歌谣.mp3', 'https://www.liaofuzhan.com/music/远航.mp3', 'https://www.liaofuzhan.com/music/夕阳中的城市.mp3' );　//创建一个数组并赋值
+				 var songURL = StaticSong[parseInt(Math.random() * StaticSong.length)];
+				 var songName = songURL.split("/music/")[1];
+				 $("#audio_id").attr("src", songURL);
+			  	//回显曲目
+			  	//$("#song_title").html($("#audio_id").attr("src"));
+			  	$("#song_title").html(songName);
+			 });
+			 
+			 function nextOne(){
+				location.reload();
+				//  setInterval(nextOne(),5000);
+				//	setTimeout(location.reload(),10000);
+			 }
+			  
+		</script>
+		
+        <canvas id="c"></canvas>
+        
+        <script>
+			var b = document.body;
+			var c = document.getElementsByTagName('canvas')[0];
+			var a = c.getContext('2d');
+			document.body.clientWidth;
+		</script>
+        <script>
+			with (m = Math)
+			C = cos, S = sin, P = pow, R = random;
+			c.width = c.height = f = 613;
+			h = -250;
+			function p(a, b, c) {
+			    if (c > 60)
+			        return [ S(a * 7) * (13 + 5 / (.2 + P(b * 4, 4))) - S(b) * 50,
+			                b * f + 50,
+			                625 + C(a * 7) * (13 + 5 / (.2 + P(b * 4, 4))) + b * 400,
+			                a * 1 - b / 2,
+			                a ];
+			   	 A = a * 2 - 1;
+			   	 B = b * 2 - 1;
+			   if(A*A+B*B<1){
+					if(c>37){
+						n=(j=c&1)?6:4;
+						o=.5/(a+.01)+C(b*125)*3-a*300;
+						w=b*h;
+						return[o*C(n)+w*S(n)+j*610-390,o*S(n)-w*C(n)+550-j*350,1180+C(B+A)*99-j*300,.4-a*.1+P(1-B*B,-h*6)*.15-a*b*.4+C(a+b)/5+P(C((o*(a+1)+(B>0?w:-w))/25),30)*.1*(1-B*B),o/1e3+.7-o*w*3e-6]
+					}
+					if(c>32){
+						c=c*1.16-.15;o=a*45-20;w=b*b*h;z=o*S(c)+w*C(c)+620;
+						return[o*C(c)-w*S(c),28+C(B*.5)*99-b*b*b*60-z/2-h,z,(b*b*.3+P((1-(A*A)),7)*.15+.3)*b,b*.7]
+					}
+					o=A*(2-b)*(80-c*2);
+					w=99-C(A)*120-C(b)*(-h-c*4.9)+C(P(1-b,7))*50+c*2;
+					z=o*S(c)+w*C(c)+700;
+					return[o*C(c)-w*S(c),B*99-C(P(b, 7))*50-c/3-z/1.35+450,z,(1-b/1.2)*.9+a*.1, P((1-b),20)/4+.05]
+				  }
+				}
+				setInterval(
+						'for(i=0;i<1e4;i++)if(s=p(R(),R(),i%46/.74)){z=s[2];x=~~(s[0]*f/z-h);y=~~(s[1]*f/z-h);if(!m[q=y*f+x]|m[q]>z)m[q]=z,a.fillStyle="rgb("+~(s[3]*h)+","+~(s[4]*h)+","+~(s[3]*s[3]*-80)+")",a.fillRect(x,y,1,1)}'
+						,0)
+		</script>
+		
+		<div style="margin-top: 0px;">
+			<a href="javascript:void(0)" style="text-decoration:none;" title="点我有惊喜哦~ (*^__^*) 嘻嘻…" onclick="alert('开心快乐每一天！ ╰(￣▽￣)╮');">
+				<h4><p id="bottom_surprise_id" style="text-align:center;color:#00FFFF">surprise</p></h4>
+			</a>
+		</div>
+		
+		<div style="margin-top: 80px;">
+			<MARQUEE onmouseover=this.stop() onmouseout=this.start()  scrollAmount=10 direction=left behavior=alternate>
+					<a href="https://www.liaofuzhan.com" target="_blank" style="text-decoration:none;" title="好久没来逛了耶 (ToT)/~~~" onclick="alert('北宸的小站，欢迎您的光临 ( ^_^ ) ');">
+						<span>点我的名字，欢迎常来逛逛！(*^__^*) 嘻嘻……</span>
+				    </a>
+			</MARQUEE>
+		</div>
+
+		<div	style="text-align: left;margin: 50px 0px 0px 30px"
+				data-weibo-title="分享到微博"
+				data-qq-title="分享到QQ"
+				data-douban-title="分享到豆瓣"
+				class="social-share"
+				class="share-component"
+
+				{#
+				data-disabled="twitter,facebook"
+				#}
+
+				data-disabled="qzone,google+,linkedin"
+				data-description="Share.js - 一键分享到微博，QQ空间，腾讯微博，人人，豆瓣...">
+			分享到：
+		</div>
+	
+    </body>
+</html>
