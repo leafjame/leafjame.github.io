@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.liaofuzhan.com/"/>
-  <updated>2024-04-21T09:23:14.114Z</updated>
+  <updated>2024-04-21T10:07:59.687Z</updated>
   <id>https://www.liaofuzhan.com/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Java7/8 中的 HashMap 和 ConcurrentHashMap 全解析</title>
+    <link href="https://www.liaofuzhan.com/posts/1009150202.html"/>
+    <id>https://www.liaofuzhan.com/posts/1009150202.html</id>
+    <published>2024-04-21T08:55:45.000Z</published>
+    <updated>2024-04-21T10:07:59.687Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;网上关于 HashMap 和 ConcurrentHashMap 的文章确实不少，不过缺斤少两的文章比较多，所以才想自己也写一篇，把细节说清楚说透，尤其像 Java8 中的 ConcurrentHashMap，大部分文章都说不清楚。终归是希望能降低大家学习的成本，不希望大家到处找各种不是很靠谱的文章，看完一篇又一篇，可是还是模模糊糊。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Java" scheme="https://www.liaofuzhan.com/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="https://www.liaofuzhan.com/tags/Java/"/>
+    
+      <category term="HashMap" scheme="https://www.liaofuzhan.com/tags/HashMap/"/>
+    
+      <category term="Jdk 7/8" scheme="https://www.liaofuzhan.com/tags/Jdk-7-8/"/>
+    
+      <category term="ConcurrentHashMap" scheme="https://www.liaofuzhan.com/tags/ConcurrentHashMap/"/>
+    
+  </entry>
+  
+  <entry>
     <title>RateLimiter 源码分析(Guava 和 Sentinel 实现)</title>
     <link href="https://www.liaofuzhan.com/posts/1518365853.html"/>
     <id>https://www.liaofuzhan.com/posts/1518365853.html</id>
     <published>2024-03-19T13:02:10.000Z</published>
-    <updated>2024-04-21T09:23:14.114Z</updated>
+    <updated>2024-04-21T09:47:25.246Z</updated>
     
     <summary type="html">
     
@@ -32,9 +58,9 @@
       <category term="Java" scheme="https://www.liaofuzhan.com/categories/Java/"/>
     
     
-      <category term="Java" scheme="https://www.liaofuzhan.com/tags/Java/"/>
-    
       <category term="限流" scheme="https://www.liaofuzhan.com/tags/%E9%99%90%E6%B5%81/"/>
+    
+      <category term="Java" scheme="https://www.liaofuzhan.com/tags/Java/"/>
     
       <category term="Guava" scheme="https://www.liaofuzhan.com/tags/Guava/"/>
     
@@ -49,7 +75,7 @@
     <link href="https://www.liaofuzhan.com/posts/1892723867.html"/>
     <id>https://www.liaofuzhan.com/posts/1892723867.html</id>
     <published>2022-03-05T04:16:15.000Z</published>
-    <updated>2023-08-19T05:26:00.443Z</updated>
+    <updated>2024-04-21T09:52:16.882Z</updated>
     
     <summary type="html">
     
@@ -256,9 +282,9 @@
       <category term="Tech" scheme="https://www.liaofuzhan.com/categories/Tech/"/>
     
     
-      <category term="Pjax" scheme="https://www.liaofuzhan.com/tags/Pjax/"/>
-    
       <category term="加速" scheme="https://www.liaofuzhan.com/tags/%E5%8A%A0%E9%80%9F/"/>
+    
+      <category term="Pjax" scheme="https://www.liaofuzhan.com/tags/Pjax/"/>
     
   </entry>
   
@@ -366,11 +392,11 @@
       <category term="神器" scheme="https://www.liaofuzhan.com/categories/%E7%A5%9E%E5%99%A8/"/>
     
     
-      <category term="浪漫" scheme="https://www.liaofuzhan.com/tags/%E6%B5%AA%E6%BC%AB/"/>
-    
       <category term="特效" scheme="https://www.liaofuzhan.com/tags/%E7%89%B9%E6%95%88/"/>
     
       <category term="过节" scheme="https://www.liaofuzhan.com/tags/%E8%BF%87%E8%8A%82/"/>
+    
+      <category term="浪漫" scheme="https://www.liaofuzhan.com/tags/%E6%B5%AA%E6%BC%AB/"/>
     
   </entry>
   
@@ -467,28 +493,6 @@
       <category term="RSS" scheme="https://www.liaofuzhan.com/tags/RSS/"/>
     
       <category term="邮件订阅" scheme="https://www.liaofuzhan.com/tags/%E9%82%AE%E4%BB%B6%E8%AE%A2%E9%98%85/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一年一度万圣节</title>
-    <link href="https://www.liaofuzhan.com/posts/299207420.html"/>
-    <id>https://www.liaofuzhan.com/posts/299207420.html</id>
-    <published>2019-10-31T09:50:58.000Z</published>
-    <updated>2023-08-19T05:26:00.451Z</updated>
-    
-    <summary type="html">
-    
-      &lt;div class=&quot;group-picture&quot;&gt;&lt;div class=&quot;group-picture-container&quot;&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;div class=&quot;group-picture-column&quot; style=&quot;width:100%&quot;&gt;&lt;img class=&quot;index_img_class&quot; src=&quot;https://cdn.jsdelivr.net/gh/leafjame/cdn/img/articles/10/1.gif&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
-    
-    </summary>
-    
-      <category term="随笔" scheme="https://www.liaofuzhan.com/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-      <category term="随笔" scheme="https://www.liaofuzhan.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-      <category term="万圣节" scheme="https://www.liaofuzhan.com/tags/%E4%B8%87%E5%9C%A3%E8%8A%82/"/>
     
   </entry>
   
