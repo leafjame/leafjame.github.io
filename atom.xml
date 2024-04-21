@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.liaofuzhan.com/"/>
-  <updated>2023-08-19T05:26:00.443Z</updated>
+  <updated>2024-04-21T09:23:14.114Z</updated>
   <id>https://www.liaofuzhan.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RateLimiter 源码分析(Guava 和 Sentinel 实现)</title>
+    <link href="https://www.liaofuzhan.com/posts/1518365853.html"/>
+    <id>https://www.liaofuzhan.com/posts/1518365853.html</id>
+    <published>2024-03-19T13:02:10.000Z</published>
+    <updated>2024-04-21T09:23:14.114Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文主要介绍关于流控的两部分内容。&lt;/p&gt;&lt;p&gt;第一部分介绍 Guava 中 RateLimiter 的源码，包括它的两种模式，目前网上大部分文章只分析简单的 SmoothBursty 模式，而没有分析带有预热的 SmoothWarmingUp。第二部分介绍 Sentinel 中流控的实现，本文不要求读者了解 Sentinel，这部分内容和 Sentinel 耦合很低，所以读者不需要有阅读压力。Sentinel 中流控设计是参考 Guava RateLimiter 的，所以阅读第二部分内容，需要有第一部分内容的背景。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Java" scheme="https://www.liaofuzhan.com/categories/Java/"/>
+    
+    
+      <category term="限流" scheme="https://www.liaofuzhan.com/tags/%E9%99%90%E6%B5%81/"/>
+    
+      <category term="Java" scheme="https://www.liaofuzhan.com/tags/Java/"/>
+    
+      <category term="Guava" scheme="https://www.liaofuzhan.com/tags/Guava/"/>
+    
+      <category term="RateLimiter" scheme="https://www.liaofuzhan.com/tags/RateLimiter/"/>
+    
+      <category term="Sentinel" scheme="https://www.liaofuzhan.com/tags/Sentinel/"/>
+    
+  </entry>
   
   <entry>
     <title>一行一行源码分析清楚 AbstractQueuedSynchronizer (三)</title>
@@ -38,13 +66,13 @@
     
       <category term="ReentrantLock" scheme="https://www.liaofuzhan.com/tags/ReentrantLock/"/>
     
-      <category term="并发" scheme="https://www.liaofuzhan.com/tags/%E5%B9%B6%E5%8F%91/"/>
-    
       <category term="CountDownLatch" scheme="https://www.liaofuzhan.com/tags/CountDownLatch/"/>
     
       <category term="CyclicBarrier" scheme="https://www.liaofuzhan.com/tags/CyclicBarrier/"/>
     
       <category term="Semaphore" scheme="https://www.liaofuzhan.com/tags/Semaphore/"/>
+    
+      <category term="并发" scheme="https://www.liaofuzhan.com/tags/%E5%B9%B6%E5%8F%91/"/>
     
   </entry>
   
@@ -70,9 +98,9 @@
     
       <category term="ReentrantLock" scheme="https://www.liaofuzhan.com/tags/ReentrantLock/"/>
     
-      <category term="ConditionObject" scheme="https://www.liaofuzhan.com/tags/ConditionObject/"/>
-    
       <category term="并发" scheme="https://www.liaofuzhan.com/tags/%E5%B9%B6%E5%8F%91/"/>
+    
+      <category term="ConditionObject" scheme="https://www.liaofuzhan.com/tags/ConditionObject/"/>
     
   </entry>
   
@@ -340,9 +368,9 @@
     
       <category term="特效" scheme="https://www.liaofuzhan.com/tags/%E7%89%B9%E6%95%88/"/>
     
-      <category term="过节" scheme="https://www.liaofuzhan.com/tags/%E8%BF%87%E8%8A%82/"/>
-    
       <category term="浪漫" scheme="https://www.liaofuzhan.com/tags/%E6%B5%AA%E6%BC%AB/"/>
+    
+      <category term="过节" scheme="https://www.liaofuzhan.com/tags/%E8%BF%87%E8%8A%82/"/>
     
   </entry>
   
@@ -461,32 +489,6 @@
       <category term="随笔" scheme="https://www.liaofuzhan.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
       <category term="万圣节" scheme="https://www.liaofuzhan.com/tags/%E4%B8%87%E5%9C%A3%E8%8A%82/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>京郊赏红叶之行</title>
-    <link href="https://www.liaofuzhan.com/posts/1259393631.html"/>
-    <id>https://www.liaofuzhan.com/posts/1259393631.html</id>
-    <published>2019-10-27T10:25:28.000Z</published>
-    <updated>2023-08-19T05:26:00.451Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;北京的秋天，像突然转凉的天气一样，在措不及防之时，已是漫山遍野的秋意。秋短且浓烈，已是赏红叶的最佳时节。香山的红叶出了名，不过就是人太多，工作日尚且如此，何况周末。和朋友合计了下，反正我俩以前也去过，这次就换个地儿。参考了网上赏红叶相关的攻略，决定自驾前往房山红井路——北京醉美的一条乡村公路！&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="随笔" scheme="https://www.liaofuzhan.com/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-      <category term="随笔" scheme="https://www.liaofuzhan.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-      <category term="京郊" scheme="https://www.liaofuzhan.com/tags/%E4%BA%AC%E9%83%8A/"/>
-    
-      <category term="自驾" scheme="https://www.liaofuzhan.com/tags/%E8%87%AA%E9%A9%BE/"/>
-    
-      <category term="红叶" scheme="https://www.liaofuzhan.com/tags/%E7%BA%A2%E5%8F%B6/"/>
     
   </entry>
   
